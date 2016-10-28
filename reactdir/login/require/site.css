@@ -1,0 +1,4529 @@
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2015/10/12 14:23
+ * FileName: site.less
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2015/10/15 9:50
+ * Description: 基础的样式值变量
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2015/12/8 14:35
+ * Description: 基础的样式类
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+em {
+  font-style: normal;
+}
+.inline-block {
+  display: inline-block;
+}
+.select-none {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.margin-auto {
+  margin: auto;
+}
+.margin-top-sm {
+  margin-top: 15px !important;
+}
+.margin-top-md {
+  margin-top: 30px !important;
+}
+.margin-top-lg {
+  margin-top: 60px !important;
+}
+.margin-bottom-sm {
+  margin-bottom: 15px !important;
+}
+.margin-bottom-md {
+  margin-bottom: 30px !important;
+}
+.margin-bottom-lg {
+  margin-bottom: 60px !important;
+}
+.padding-top-md {
+  padding-top: 30px !important;
+}
+.padding-top-lg {
+  padding-top: 60px !important;
+}
+.padding-top-xl {
+  padding-top: 90px !important;
+}
+.width-xs {
+  min-width: 600px;
+}
+.width-sm {
+  min-width: 700px;
+}
+.width-md {
+  min-width: 800px;
+}
+.width-lg {
+  min-width: 900px;
+}
+.width-xl {
+  min-width: 1000px;
+}
+.width-2x {
+  min-width: 1100px;
+}
+.modal-width-2s {
+  width: 200px !important;
+}
+.modal-width-xs {
+  width: 300px !important;
+}
+.modal-width-sm {
+  width: 400px !important;
+}
+.modal-width-md {
+  width: 500px !important;
+}
+.modal-width-lg {
+  width: 600px !important;
+}
+.modal-width-xl {
+  width: 700px !important;
+}
+.modal-width-2x {
+  width: 800px !important;
+}
+.modal-width-3x {
+  width: 900px !important;
+}
+.modal-width-4x {
+  width: 1000px !important;
+}
+.btn-width-md {
+  width: 200px;
+}
+.width-auto {
+  width: 100% !important;
+}
+.btn-form {
+  width: 500px;
+}
+.btn-group.form .btn {
+  width: 400px;
+}
+.btn-group.form > :first-child {
+  width: 100px;
+}
+.no-padding-vertical {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.no-padding-horizontal {
+  padding-left: 0;
+  padding-right: 0;
+}
+.no-margin-vertical {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.no-margin-horizontal {
+  margin-left: 0;
+  margin-right: 0;
+}
+.input-border {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, -o-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border: 1px solid #dce4ec;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.input-border:focus {
+  border-color: #2c3e50;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+}
+.normal-box-shadow {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.input-bg {
+  background-color: #fafafa;
+}
+.input-font {
+  color: #555;
+  font-size: 14px;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2015/12/8 11:51
+ * Description: 表单样式
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+.dashboard .form-wrap {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+}
+/*主体亮色背景的内容框*/
+.form-wrap {
+  position: relative;
+  margin: 10px auto 0 auto;
+  padding: 15px 20px 10px;
+  width: 800px;
+  background: #fff;
+  text-align: center;
+  /* 小型点选框-radio */
+  /*IP段范围*/
+  /*IP输入框样式*/
+  /*Tab切换*/
+}
+.form-wrap form {
+  margin-top: 20px;
+}
+.form-wrap form.editableform {
+  margin-top: 0;
+}
+.form-wrap .form-header {
+  text-align: left;
+  margin: -20px 0 0;
+  border-bottom: 3px solid #81d8d0;
+}
+.form-wrap .form-header h1,
+.form-wrap .form-header h2,
+.form-wrap .form-header h3,
+.form-wrap .form-header h4,
+.form-wrap .form-header h5,
+.form-wrap .form-header h6 {
+  text-indent: 2em;
+}
+.form-wrap.modal-body {
+  width: 650px;
+}
+.form-wrap form {
+  font-size: 16px;
+  text-align: left;
+  display: inline-block;
+}
+.form-wrap section {
+  text-indent: 2em;
+  font-size: 16px;
+  text-align: left;
+}
+.form-wrap .form-group {
+  margin: 0 auto 15px;
+  width: 500px;
+}
+.form-wrap .address_list li {
+  font-size: 14px;
+}
+.form-wrap .address_list li:hover .delete-address {
+  display: inline-block !important;
+}
+.form-wrap .address_list li + li {
+  margin-top: 6px;
+}
+.form-wrap .address_list span {
+  text-indent: 0;
+  display: inline-block;
+}
+.form-wrap .address_list .contact-person {
+  min-width: 60px;
+}
+.form-wrap .address_list .mobile {
+  min-width: 95px;
+}
+.form-wrap .address_list address {
+  margin-bottom: 4px;
+}
+.form-wrap .address-list-wrap-border {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: visible;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px 0;
+}
+.form-wrap .address-btn .btn {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.form-wrap .form-group > label {
+  letter-spacing: .2em;
+}
+.form-wrap #form_wireless .radio-block,
+.form-wrap #form_wired .radio-block {
+  width: 160px;
+}
+.form-wrap #form_vpnserver .radio-block {
+  width: 93px;
+}
+.form-wrap .radio-block {
+  margin: 2px 1px !important;
+  padding: 10px 15px;
+  width: 119px;
+  height: 45px;
+  text-align: center;
+  color: #777777;
+  background-color: #fafafa;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, -o-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border: 1px solid #dce4ec;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.form-wrap .radio-block:focus {
+  border-color: #2c3e50;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+}
+.form-wrap .radio-block:hover {
+  background: #e6e6e6;
+  color: #222222;
+}
+.form-wrap .radio-block.radio-block-active {
+  background: #39baae;
+  color: #fff;
+  border-color: #2d9389;
+}
+.form-wrap .radio-block input[type="radio"] {
+  display: none;
+}
+.form-wrap .ip-range-wrap {
+  width: 120px;
+  display: inline-block;
+}
+.form-wrap .ip_range {
+  width: 360px;
+  display: inline-block;
+}
+.form-wrap .not-important label,
+.form-wrap .not-important input {
+  color: #777777;
+  font-weight: normal;
+}
+.form-wrap div.form-control {
+  padding: 0;
+  width: 500px;
+}
+.form-wrap div.form-control span {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.form-wrap .form-control {
+  overflow: hidden;
+}
+.form-wrap .form-control:last-child.ip {
+  width: 250px;
+  text-align: left;
+  text-indent: 10px;
+}
+.form-wrap .form-control.ip {
+  display: inline-block;
+  width: 52px;
+  height: 41px;
+  margin: 0;
+  padding: 6px 10px;
+  text-align: center;
+  border: none;
+}
+.form-wrap .form-control.port-range {
+  width: 238px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.form-wrap .form-control.mac {
+  display: inline-block;
+  width: 50px;
+  height: 41px;
+  margin: 0;
+  padding: 6px 0;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  /*background-color: transparent;*/
+}
+.form-wrap .form-control-focus {
+  outline: 0;
+  border-color: #2c3e50;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+}
+.form-wrap .nav-tabs > li > a {
+  font-size: 16px;
+  color: #555;
+}
+.form-wrap .tab-content {
+  padding: 15px 0 15px 0;
+}
+/*网关编辑*/
+.edit-vlan {
+  width: 500px;
+  margin: 20px auto 0 auto;
+}
+.edit-vlan .sp-replacer,
+.edit-vlan .sp-preview {
+  width: 182px;
+}
+.edit-vlan .help-block {
+  margin-bottom: 0;
+  text-align: left;
+}
+.edit-vlan .panel-heading {
+  font-size: 18px;
+  font-weight: bold;
+}
+.edit-vlan td {
+  height: 50px;
+  vertical-align: middle !important;
+  padding: 6px 10px !important;
+}
+.edit-vlan td:first-child {
+  width: 150px;
+}
+.edit-vlan .simpleColorDisplay {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+}
+.edit-vlan .simpleColorChooser {
+  top: 35px !important;
+  left: 110px !important;
+  z-index: 1;
+}
+.edit-vlan .form-inline,
+.edit-vlan .form-group {
+  width: 100%;
+}
+.edit-vlan .edit-checklist {
+  max-width: 350px;
+}
+.edit-vlan .edit-checklist > div {
+  display: inline-block;
+  width: 80px;
+  margin-right: 5px;
+}
+.edit-vlan .edit-checklist input {
+  width: 15px;
+  height: 15px;
+}
+.edit-vlan .editable-input {
+  vertical-align: bottom;
+}
+.edit-vlan .select2-selection__choice {
+  width: 132px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.edit-vlan .help-block {
+  font-size: 14px;
+}
+.required-mark {
+  font-size: 28px;
+  line-height: 12px;
+  vertical-align: bottom;
+  width: 16px;
+  display: inline-block;
+  color: #c00;
+}
+.required-mark:after {
+  content: '*';
+}
+/*logo上传按钮*/
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.fileinput-button .logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  font-size: 30px;
+  direction: ltr;
+  cursor: pointer;
+}
+/*裁切图片*/
+.crop-show {
+  display: block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background: #f2f2f2;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.crop-show .fa {
+  display: inline-block;
+  margin-top: 32px;
+}
+.crop-show .logo-preview-default {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  vertical-align: middle;
+}
+.crop-show .logo-preview {
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.crop-img.inner-page {
+  text-align: center;
+}
+.crop-img.inner-page .img-layer {
+  position: relative;
+  overflow: hidden;
+}
+.crop-img.inner-page .edit-left-wrap {
+  float: left;
+  width: 350px;
+  height: 350px;
+}
+.crop-img.inner-page .edit-left {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #e5e5e5;
+}
+.crop-img.inner-page .edit-left .pic-limit {
+  margin-top: 130px;
+  height: 40px;
+  color: #8c8c8c;
+  font-size: 14px;
+}
+.crop-img.inner-page .edit-left .pic-limit span {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+.crop-img.inner-page .edit-left .pic-limit span.fa {
+  position: absolute;
+  top: 45px;
+  left: 70px;
+  font-size: 15em;
+  z-index: 0;
+  color: #eeeeee;
+}
+.crop-img.inner-page .edit-left img {
+  max-height: 300px;
+  max-width: 300px;
+}
+.crop-img.inner-page .img-operate-button {
+  margin: auto;
+  width: 300px;
+  padding-top: 10px;
+  text-align: right;
+}
+.crop-img.inner-page .edit-right {
+  float: right;
+  margin-right: 25px;
+  width: 125px;
+  height: 350px;
+}
+.crop-img.inner-page .edit-right .title {
+  padding: 5px 0;
+  background: #f2f2f2;
+  font-weight: normal;
+}
+.crop-img.inner-page .edit-right .preview-wrap {
+  width: 100%;
+  height: 300px;
+  background: #f2f2f2;
+  padding: 10px 10px 0;
+  margin-bottom: 10px;
+}
+.crop-img.inner-page .edit-right .avatar {
+  width: 100px;
+}
+.crop-img.inner-page .edit-right .avatar + .avatar {
+  margin: 12px auto 0;
+}
+.crop-img.inner-page .edit-right .avatar .preview {
+  margin: auto;
+  overflow: hidden;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC);
+}
+.crop-img.inner-page .edit-right .avatar .preview.circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.crop-img.inner-page .edit-right .avatar-100 {
+  height: 125px;
+}
+.crop-img.inner-page .edit-right .avatar-100 .preview {
+  width: 100px;
+  height: 100px;
+}
+.crop-img.inner-page .edit-right .avatar-100 .preview img {
+  width: 100px;
+}
+.crop-img.inner-page .edit-right .avatar-50 {
+  height: 75px;
+}
+.crop-img.inner-page .edit-right .avatar-50 .preview {
+  width: 50px;
+  height: 50px;
+}
+.crop-img.inner-page .edit-right .avatar-50 .preview img {
+  width: 50px;
+}
+.crop-img.inner-page .edit-right .avatar-30 {
+  height: 55px;
+}
+.crop-img.inner-page .edit-right .avatar-30 .preview {
+  width: 30px;
+  height: 30px;
+}
+.crop-img.inner-page .edit-right .avatar-30 .preview img {
+  width: 30px;
+}
+.crop-img.inner-page .edit-right .btn {
+  font-size: 12px;
+  line-height: 18px;
+  height: 38px;
+}
+.crop-img.inner-page .btn-send-data-wrap {
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+}
+.crop-img.modal .img-layer {
+  position: relative;
+  overflow: hidden;
+}
+.crop-img.modal .edit-left {
+  float: left;
+  width: 400px;
+  height: 400px;
+  line-height: 400px;
+}
+.crop-img.modal .edit-left .pic-limit {
+  color: #8c8c8c;
+}
+.crop-img.modal .edit-left img {
+  max-height: 400px;
+  max-width: 400px;
+}
+.crop-img.modal .edit-right {
+  float: right;
+  width: 150px;
+  height: 400px;
+}
+.crop-img.modal .edit-right .title {
+  padding: 10px 0;
+  background: #f2f2f2;
+  font-weight: normal;
+}
+.crop-img.modal .edit-right .preview-wrap {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  padding: 0 20px;
+}
+.crop-img.modal .edit-right .avatar {
+  width: 100px;
+  margin: 20px auto 0;
+}
+.crop-img.modal .edit-right .avatar .preview {
+  margin: auto;
+  overflow: hidden;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC);
+}
+.crop-img.modal .edit-right .avatar .preview.circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.crop-img.modal .edit-right .avatar-160 .preview {
+  width: 106px;
+  height: 60px;
+}
+.crop-img.modal .edit-right .avatar-100 {
+  height: 125px;
+}
+.crop-img.modal .edit-right .avatar-100 .preview {
+  width: 100px;
+  height: 100px;
+}
+.crop-img.modal .edit-right .avatar-50 {
+  height: 75px;
+}
+.crop-img.modal .edit-right .avatar-50 .preview {
+  width: 50px;
+  height: 50px;
+}
+.crop-img.modal .edit-right .avatar-30 {
+  height: 55px;
+}
+.crop-img.modal .edit-right .avatar-30 .preview {
+  width: 30px;
+  height: 30px;
+}
+.crop-img.modal .img-operate-button {
+  width: 400px;
+  padding-top: 10px;
+  text-align: right;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2015/12/8 14:40
+ * Description: 菜单样式
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+/*顶部菜单*/
+.navbar {
+  min-width: 700px;
+  /*与.out-container一致*/
+  margin-bottom: 0;
+  background-color: #fff;
+  height: 52px;
+}
+.navbar .router-name {
+  margin-top: 12px;
+  margin-left: 45px;
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  .navbar .router-name {
+    margin-left: 30px;
+  }
+}
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  color: #39baae;
+}
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > li > a:focus {
+  background-color: transparent;
+}
+.navbar .navbar-nav {
+  margin-right: 30px;
+}
+@media screen and (max-width: 900px) {
+  .navbar .navbar-nav {
+    display: none;
+  }
+}
+.navbar .navbar-nav li a {
+  color: #404040;
+}
+.navbar .navbar-nav li a:hover {
+  color: #39baae;
+}
+.navbar .nav-icon {
+  color: #fff;
+  margin-top: 11px;
+}
+.navbar #toggle_menu {
+  margin-left: 45px;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 11px;
+}
+.navbar #toggle_menu.media-menu {
+  margin-left: -28px;
+}
+@media screen and (max-width: 900px) {
+  .navbar #toggle_menu.media-menu {
+    margin-left: 45px;
+  }
+}
+.navbar .help {
+  margin-right: 45px;
+  color: #fff;
+  margin-top: 11px;
+}
+.navbar .navbar-logo {
+  position: absolute;
+  display: block;
+}
+.navbar .navbar-logo img {
+  height: 40px;
+  margin: 6px;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2015/12/23 11:01
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+/*选择套餐*/
+.out-select-wrap {
+  background: #fff;
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.close-wrap {
+  padding: 10px 0 5px 20px;
+  margin: 0 20px 20px 20px;
+  border-bottom: solid 2px #81d8d0;
+}
+.close-wrap .close {
+  display: inline-block;
+  margin-top: -35px;
+}
+.out-select {
+  padding-top: -20px;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2016/3/28 9:16
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+ */
+.license {
+  background: #fff;
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.license .content-wrap {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.license li {
+  min-height: 30px;
+  padding: 10px;
+  font-size: 14px;
+}
+.license li:nth-child(odd) {
+  background: #f2f2f2;
+}
+.license .license-form .duration-slider {
+  margin: 10px 0 0 0;
+}
+.license .license-form label {
+  margin-bottom: 1px;
+}
+.license .field {
+  margin: 145px 0 0 0;
+  float: left;
+  width: 139px;
+  position: relative;
+  z-index: 10;
+}
+.license .field li {
+  padding: 10px 5px;
+}
+.license .field li.description {
+  height: 60px;
+}
+.license .field li.operate {
+  background: #fff;
+}
+.license .field li.promotion {
+  height: 60px;
+}
+.license .license-list {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  padding: 0 0 0 139px;
+  margin: 0 0 0 -139px;
+  float: left;
+}
+.license .license-list ul {
+  margin: 0;
+  width: 25%;
+  float: left;
+}
+.license .license-list ul li {
+  border-left: 2px solid #cff0ed;
+}
+.license .license-list ul li.name {
+  border-left: none;
+  font-size: 16px;
+  padding: 5px 10px 0;
+  background: #fff;
+  color: #39baae;
+}
+.license .license-list ul li.promotion {
+  height: 60px;
+}
+.license .license-list ul li.price {
+  border-left: none;
+  height: 115px;
+}
+.license .license-list ul li.price del {
+  font-size: 18px;
+  color: #c00;
+  text-decoration: line-through;
+}
+.license .license-list ul li.price .currency {
+  font-size: 28px;
+}
+.license .license-list ul li.price .number {
+  font-size: 40px;
+  line-height: 70px;
+}
+.license .license-list ul li.description {
+  height: 60px;
+}
+.license .license-list ul li.description p {
+  margin: auto;
+  max-width: 210px;
+  vertical-align: middle;
+}
+.license .license-list ul li.operate {
+  border-top: 2px #cff0ed;
+  border-left: none;
+  background: #fff;
+}
+.license .license-list ul li.operate .btn {
+  width: 80%;
+}
+/*选择设备*/
+.device .out-select {
+  padding: 0 0 20px 0;
+}
+.device .region-select {
+  margin: -42px 0 0 50px;
+  width: 210px;
+  display: inline-block;
+  float: left;
+}
+.device .item {
+  position: relative;
+  margin: 0 15px;
+  width: 240px;
+  height: 690px;
+  padding: 0 0 20px 0;
+  background: #fff;
+  vertical-align: top;
+  zoom: 1;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 10px #aaaaaa;
+  -moz-box-shadow: 0 0 10px #aaaaaa;
+  box-shadow: 0 0 10px #aaaaaa;
+}
+.device .item .table {
+  height: 360px;
+}
+.device .item .price-wrap {
+  height: 80px;
+  line-height: 80px;
+  margin: 0 0 8px 0;
+}
+.device .item .price-wrap .number {
+  font-size: 60px;
+}
+.device .item .price-wrap .currency {
+  font-size: 28px;
+}
+.device .item .btn {
+  vertical-align: bottom;
+  width: 200px;
+}
+.device .item .pic {
+  height: 100px;
+}
+.device .item ul {
+  list-style: none;
+  text-align: left;
+}
+.device .item dl {
+  text-align: left;
+}
+.device .item dl dt {
+  text-indent: 3em;
+}
+.device .item table {
+  margin-bottom: 0;
+}
+.device .item td {
+  border-bottom: 1px solid #999 !important;
+}
+.device .item td:first-child {
+  text-align: right;
+  border-right: 1px solid #999 !important;
+  text-indent: 2em;
+}
+.device .item td:last-child {
+  text-align: left;
+  word-break: break-all;
+}
+.device .item .promotion {
+  font-size: 16px;
+  padding: 5px 0;
+  min-height: 32px;
+}
+.device .item del {
+  font-size: 18px;
+  color: #c00;
+  text-decoration: line-through;
+}
+.device .item #add_router .btn {
+  width: 100px;
+}
+/*填写收货人信息*/
+.form-address .signal-name,
+.form-wrap .signal-name {
+  width: 230px;
+}
+.form-address .phone,
+.form-wrap .phone {
+  display: block;
+  clear: both;
+}
+.form-address .address-loading,
+.form-wrap .address-loading {
+  margin: 0 auto -15px 5px;
+  padding: 10px 45px !important;
+  display: inline-block;
+}
+.form-address #address_input .form-control,
+.form-wrap #address_input .form-control {
+  width: 120px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.form-address #select_province,
+.form-wrap #select_province {
+  display: inline-block;
+}
+.form-address #select_city,
+.form-wrap #select_city,
+.form-address #select_district,
+.form-wrap #select_district,
+.form-address #select_street,
+.form-wrap #select_street {
+  display: none;
+}
+/*成功加入购物车*/
+.result {
+  display: table;
+  width: 100%;
+}
+.result .fa {
+  padding-right: 5px;
+}
+.result .left {
+  position: relative;
+  float: left;
+  min-height: 200px;
+  max-width: 500px;
+}
+.result .left .pic {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC);
+}
+.result .left .pic img {
+  vertical-align: middle;
+  max-width: 200px;
+  max-height: 200px;
+}
+.result .left .info {
+  float: right;
+  text-align: left;
+  margin: 0 0 0 20px;
+}
+.result .left .info .device-info {
+  height: 120px;
+}
+.result .left .info .quantity-info em {
+  color: #c00;
+}
+.result .left .info .add-more {
+  vertical-align: bottom;
+}
+.result .right {
+  float: right;
+  text-align: right;
+}
+.result .right .result-hint {
+  margin: 0 0 75px;
+  font-size: 18px;
+}
+.result .right .result-hint .fa {
+  vertical-align: middle;
+  color: #04af09;
+}
+.result .right .price-summary {
+  color: #c00;
+  font-size: 16px;
+}
+.result .right .price-summary .price-info {
+  font-size: 20px;
+}
+.result .right .cart-summary em {
+  color: #c00;
+}
+.result .right .result-op .btn {
+  width: 130px;
+}
+/*购物车*/
+.cart {
+  width: 760px;
+  margin: auto;
+  text-align: left;
+  padding: 20px 0 0 0;
+}
+.cart .address-list {
+  font-size: 14px;
+  padding: 0 0 20px 20px;
+}
+.cart .address-list li label {
+  font-weight: normal;
+  margin: 0 0 0 10px;
+}
+.cart .address-list li span {
+  display: inline-block;
+}
+.cart .address-list li span.contact-person {
+  width: 100px;
+}
+.cart .address-list li span.mobile {
+  width: 100px;
+}
+.cart .payment {
+  margin: 0 0 40px 20px;
+}
+.cart .delete,
+.cart .delete-selected {
+  display: inline-block;
+  padding: 0 10px 0 0;
+}
+.cart input[type="checkbox"] {
+  cursor: pointer;
+}
+.cart .table {
+  margin: 0 auto;
+}
+.cart thead .select-all-th {
+  width: 40px;
+  overflow: visible;
+}
+.cart thead .td-inner {
+  width: 100px;
+}
+.cart thead .td-inner.td-operation {
+  text-indent: 10px;
+}
+.cart thead td div {
+  height: 30px;
+  line-height: 30px;
+}
+.cart .select-all.first {
+  width: 60px;
+  position: absolute;
+}
+.cart .select-all label {
+  cursor: pointer;
+  font-weight: normal;
+  line-height: 28px;
+}
+.cart .select-all .checkbox-product {
+  vertical-align: text-bottom;
+  height: 16px;
+  width: 16px;
+}
+.cart .product-info-th {
+  text-indent: 15px;
+}
+.cart .product-info div {
+  display: inline-block;
+}
+.cart .product-info .pic {
+  vertical-align: top;
+  width: 80px;
+  height: 80px;
+}
+.cart .product-info .pic img {
+  max-width: 80px;
+  max-height: 80px;
+}
+.cart .product-info ul {
+  margin: 0 0 0 15px;
+}
+.cart .cart-checkbox {
+  width: 100%;
+}
+.cart .cart-checkbox input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
+}
+.cart .cart-checkbox label {
+  display: none;
+}
+.cart tbody tr {
+  transition: all 0.15s;
+}
+.cart tbody tr.item {
+  background: #fff;
+}
+.cart tbody tr.disabled {
+  color: #ccc;
+}
+.cart tbody .item-price {
+  display: block;
+  color: #c00;
+}
+.cart tbody .amount-wrap .text-amount {
+  width: 40px;
+  height: 25px;
+  text-align: center;
+}
+.cart tbody .amount-wrap .minus,
+.cart tbody .amount-wrap .plus {
+  text-decoration: none;
+  border: 1px solid #eeeeee;
+  vertical-align: top;
+  line-height: 23px;
+  display: inline-block;
+  margin: 0 -4px;
+  text-align: center;
+  width: 20px;
+  height: 25px;
+  background: #eeeeee;
+  color: #333;
+}
+.cart tbody .amount-wrap .minus:hover,
+.cart tbody .amount-wrap .plus:hover {
+  border: 1px solid #81d8d0;
+}
+.cart tbody .amount-wrap .minus.disabled,
+.cart tbody .amount-wrap .plus.disabled {
+  color: #eeeeee;
+  cursor: default;
+}
+.cart tbody .amount-wrap .minus.disabled:hover,
+.cart tbody .amount-wrap .plus.disabled:hover {
+  border: 1px solid #eeeeee;
+}
+.cart tbody .delete {
+  color: #333;
+}
+.cart tbody .delete:hover {
+  color: #217dbb;
+}
+.cart .float-bar-wrapper {
+  width: 100%;
+  height: 50px;
+  line-height: 30px;
+  background: #f2f2f2;
+}
+.cart .float-bar-wrapper .select-all {
+  margin: 0 10px;
+  float: left;
+  line-height: 50px;
+}
+.cart .float-bar-wrapper .operation {
+  margin: 0 0 0 10px;
+  line-height: 50px;
+  float: left;
+}
+.cart .float-bar-wrapper .operation .delete-selected {
+  color: #333;
+}
+.cart .float-bar-wrapper .operation .delete-selected:hover {
+  text-decoration: none;
+  color: #217dbb;
+}
+.cart .float-bar-wrapper .float-bar-right {
+  float: right;
+}
+.cart .float-bar-wrapper .float-bar-right > div {
+  display: inline-block;
+}
+.cart .float-bar-wrapper .float-bar-right .amount-sum {
+  margin: 0 0 0 10px;
+}
+.cart .float-bar-wrapper .float-bar-right .amount-sum em {
+  font-size: 18px;
+  color: #c00;
+}
+.cart .float-bar-wrapper .float-bar-right .price-sum {
+  margin: 0 10px;
+  line-height: 50px;
+}
+.cart .float-bar-wrapper .float-bar-right .price-sum .price-info {
+  font-size: 18px;
+  color: #c00;
+}
+.cart .float-bar-wrapper .float-bar-right .btn-area {
+  width: 140px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+.cart .float-bar-wrapper .float-bar-right .btn-area a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: #a5a5a5;
+  cursor: not-allowed;
+  transition: all 0.15s;
+}
+.cart .float-bar-wrapper .float-bar-right .btn-area a.active {
+  cursor: pointer;
+  color: #fff;
+  background: #39baae;
+}
+.cart .float-bar-wrapper .float-bar-right .btn-area a.active:hover {
+  background: #33a69c;
+}
+.cart .float-bar-wrapper .float-bar-right .btn-area a.active:active,
+.cart .float-bar-wrapper .float-bar-right .btn-area a.active:focus {
+  background: #277f77;
+}
+@media screen and (min-width: 1381px) and (max-width: 1480px) {
+  .cart {
+    width: 860px;
+  }
+  .cart thead .select-all-th {
+    width: 55px;
+  }
+  .cart thead .td-inner {
+    width: 135px;
+  }
+  .cart .float-bar-wrapper .float-bar-right .btn-area {
+    width: 170px;
+  }
+}
+@media screen and (min-width: 1481px) and (max-width: 1580px) {
+  .cart {
+    width: 960px;
+  }
+  .cart thead .select-all-th {
+    width: 70px;
+  }
+  .cart thead .td-inner {
+    width: 150px;
+  }
+  .cart .float-bar-wrapper .float-bar-right .btn-area {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 1581px) and (max-width: 1680px) {
+  .cart {
+    width: 1060px;
+  }
+  .cart thead .select-all-th {
+    width: 85px;
+  }
+  .cart thead .td-inner {
+    width: 165px;
+  }
+  .cart .float-bar-wrapper .float-bar-right .btn-area {
+    width: 230px;
+  }
+}
+@media screen and (min-width: 1681px) and (max-width: 1780px) {
+  .cart {
+    width: 1060px;
+  }
+  .cart thead .select-all-th {
+    width: 85px;
+  }
+  .cart thead .td-inner {
+    width: 165px;
+  }
+  .cart .float-bar-wrapper .float-bar-right .btn-area {
+    width: 230px;
+  }
+}
+@media screen and (min-width: 1781px) and (max-width: 1881px) {
+  .cart {
+    width: 1060px;
+  }
+  .cart thead .select-all-th {
+    width: 85px;
+  }
+  .cart thead .td-inner {
+    width: 165px;
+  }
+  .cart .float-bar-wrapper .float-bar-right .btn-area {
+    width: 230px;
+  }
+}
+@media screen and (min-width: 1881px) {
+  .cart {
+    width: 1060px;
+  }
+  .cart thead .select-all-th {
+    width: 85px;
+  }
+  .cart thead .td-inner {
+    width: 165px;
+  }
+  .cart .float-bar-wrapper .float-bar-right .btn-area {
+    width: 230px;
+  }
+}
+/*订单列表*/
+.order .text-muted {
+  color: #999;
+}
+.order .frame {
+  padding: 0 0 20px 0;
+  border: none;
+  box-shadow: none;
+  height: 600px;
+}
+.order .scrollbar {
+  height: 710px;
+  right: 0;
+}
+.order .tb-header {
+  margin: auto;
+  max-width: 1060px;
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+}
+.order .order-item {
+  border: 1px solid #d9d9d9;
+  margin: 10px auto 0;
+  max-width: 1060px;
+}
+.order .order-item.unpaid {
+  border: 1px solid #a8e4df;
+}
+.order .order-item.unpaid:hover {
+  border: 1px solid #5accc1;
+}
+.order .order-item.unpaid .item-table tbody .td-header {
+  background: #cff0ed;
+}
+.order .order-item.unpaid .item-table tbody .info {
+  border-top: 1px solid #a8e4df;
+}
+.order .order-item.unpaid .item-table tbody .info.amount {
+  border-right: 1px solid #a8e4df;
+}
+.order .order-item.active {
+  border: 1px solid #83fc86;
+}
+.order .order-item.active:hover {
+  border: 1px solid #1ffa26;
+}
+.order .order-item.active .item-table tbody .td-header {
+  background: #b5fdb7;
+}
+.order .order-item.active .item-table tbody .info {
+  border-top: 1px solid #83fc86;
+}
+.order .order-item.active .item-table tbody .info.amount {
+  border-right: 1px solid #83fc86;
+}
+.order .order-item:hover {
+  border: 1px solid #a5a5a5;
+}
+.order .order-item .item-table {
+  background: #fff;
+  width: 100%;
+}
+.order .order-item .item-table thead td {
+  height: 0;
+}
+.order .order-item .item-table tbody .td-header {
+  text-align: left;
+  text-indent: 1em;
+  background: #f2f2f2;
+}
+.order .order-item .item-table tbody td {
+  vertical-align: top;
+  padding: 6px 10px;
+}
+.order .order-item .item-table tbody .info {
+  border-top: 1px solid #d9d9d9;
+}
+.order .order-item .item-table tbody .info.amount {
+  border-right: 1px solid #d9d9d9;
+}
+.order .order-item .item-table tbody .info .pic,
+.order .order-item .item-table tbody .info .list {
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+}
+.order .order-item .item-table tbody .info .list {
+  width: 100%;
+  text-align: center;
+}
+.order .order-item .item-table tbody .info .list .list-unstyled {
+  text-align: left;
+  display: inline-block;
+  margin: auto;
+}
+.order .order-item .item-table tbody .info .pic {
+  display: none;
+  margin: 0 4px 0 0;
+}
+.order .order-item .item-table tbody .info .pic img {
+  width: 80px;
+}
+.order .order-item .item-table tbody .info del {
+  color: #999999;
+}
+.order .order-item .item-table tbody .pay-now {
+  padding: 8px;
+}
+.order .order-item .item-table tbody .cancel,
+.order .order-item .item-table tbody .detail {
+  color: #333;
+  display: block;
+  margin: 3px 0;
+}
+.order .order-item .item-table tbody .cancel:hover,
+.order .order-item .item-table tbody .detail:hover {
+  color: #23527c;
+}
+/*订单信息*/
+.order-detail {
+  margin: 20px auto auto auto;
+  width: 100%;
+  max-width: 1060px;
+}
+.order-detail .content {
+  margin: 0 0 40px 0;
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px 20px;
+}
+.order-detail .order-header {
+  margin: 0 0 40px 0;
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px 20px;
+  border-top: none;
+  text-align: left;
+}
+.order-detail .order-header .btn {
+  padding: 5px 10px;
+}
+.order-detail .order-header p {
+  line-height: 36px;
+}
+.order-detail .order-info {
+  text-align: left;
+  margin: 0 0 40px 0;
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px 20px;
+}
+.order-detail .order-info .address {
+  margin: 0 30px 0 0;
+}
+.order-detail .order-info p {
+  line-height: 30px;
+  display: inline-block;
+}
+.order-detail .order-info hr {
+  margin: 10px auto 10px auto;
+  border-top: 1px solid #81d8d0;
+}
+.order-detail .order-info .order-time p {
+  width: 32%;
+}
+.order-detail .item-table {
+  margin: -30px 0 0 0;
+  border: 1px solid #a8e4df;
+  width: 100%;
+}
+.order-detail .item-table .total {
+  border-left: 1px solid #a8e4df;
+  font-size: 18px;
+  vertical-align: middle;
+}
+.order-detail .item-table .total strong {
+  display: block;
+}
+.order-detail .item-table .total strong,
+.order-detail .item-table .total del {
+  color: #c00;
+}
+.order-detail .item-table .list-unstyled {
+  margin: auto;
+  text-align: left;
+  display: inline-block;
+}
+.order-detail .item-table td {
+  padding: 10px;
+  vertical-align: top;
+  border-top: 1px solid #a8e4df;
+}
+.order-detail .item-table thead {
+  background: #cff0ed;
+  font-weight: bold;
+}
+.order-detail .item-table tbody tr {
+  background: #fff;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2015/12/8 14:44
+ * Description: 控制台样式
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+/*yokena-dashboard*/
+.dashboard {
+  min-width: 1260px;
+  min-height: 920px;
+  max-height: 920px;
+  height: 920px;
+  /*针对safari,如果不给height，会使用上一级的height*/
+  background: #fff;
+  padding-top: 0;
+  /*用户设置*/
+}
+.dashboard .modal {
+  padding-top: 22px;
+}
+.dashboard .container-fluid {
+  height: 100%;
+  margin-top: -52px;
+  padding-top: 52px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.dashboard .container-fluid .nav .fa {
+  margin-right: 4px;
+}
+.dashboard .container-fluid .group-add-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #aaaaaa;
+}
+.dashboard .container-fluid .group-add-icon :first-child {
+  position: relative;
+  text-align: center;
+  top: 50%;
+}
+.dashboard .container-fluid .group-add-icon .fa-plus {
+  top: 50%;
+  position: absolute;
+  color: #aaaaaa;
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
+}
+.dashboard .container-fluid .group-add-icon:hover .fa,
+.dashboard .container-fluid .group-add-icon:focus .fa,
+.dashboard .container-fluid .group-add-icon:active .fa {
+  color: #39baae;
+}
+@media screen and (min-width: 1381px) and (max-width: 1480px) {
+  .dashboard .container-fluid {
+    min-width: 1360px;
+  }
+  .dashboard .container-fluid #left {
+    width: 252px;
+  }
+  .dashboard .container-fluid #left #extend_company {
+    left: -378px;
+    width: 504px;
+  }
+  .dashboard .container-fluid #left #extend_company.active {
+    left: 126px;
+  }
+  .dashboard .container-fluid #left #extend_department {
+    left: -252px;
+    width: 504px;
+  }
+  .dashboard .container-fluid #left #extend_department.active {
+    left: 252px;
+  }
+  .dashboard .container-fluid #left .add-company,
+  .dashboard .container-fluid #left .add-department {
+    width: 125px;
+  }
+  .dashboard .container-fluid #center {
+    margin-left: -262px;
+    padding-left: 262px;
+    margin-right: -132px;
+    padding-right: 132px;
+  }
+  .dashboard .container-fluid #right {
+    width: 122px;
+  }
+  .dashboard .container-fluid #right #extend_user {
+    width: 488px;
+  }
+  .dashboard .container-fluid #right #extend_user.active {
+    left: -488px;
+  }
+  .dashboard .container-fluid #right .add-user {
+    width: 121px;
+  }
+  .dashboard .container-fluid .subscriber .order .scrollbar {
+    right: 142px;
+  }
+}
+@media screen and (min-width: 1481px) and (max-width: 1580px) {
+  .dashboard .container-fluid {
+    min-width: 1460px;
+  }
+  .dashboard .container-fluid #left {
+    width: 272px;
+  }
+  .dashboard .container-fluid #left #extend_company {
+    left: -408px;
+    width: 544px;
+  }
+  .dashboard .container-fluid #left #extend_company.active {
+    left: 136px;
+  }
+  .dashboard .container-fluid #left #extend_department {
+    left: -272px;
+    width: 544px;
+  }
+  .dashboard .container-fluid #left #extend_department.active {
+    left: 272px;
+  }
+  .dashboard .container-fluid #left .add-company,
+  .dashboard .container-fluid #left .add-department {
+    width: 135px;
+  }
+  .dashboard .container-fluid #center {
+    margin-left: -282px;
+    padding-left: 282px;
+    margin-right: -142px;
+    padding-right: 142px;
+  }
+  .dashboard .container-fluid #right {
+    width: 132px;
+  }
+  .dashboard .container-fluid #right #extend_user {
+    width: 528px;
+  }
+  .dashboard .container-fluid #right #extend_user.active {
+    left: -528px;
+  }
+  .dashboard .container-fluid #right .add-user {
+    width: 131px;
+  }
+  .dashboard .container-fluid .subscriber .order .scrollbar {
+    right: 162px;
+  }
+}
+@media screen and (min-width: 1581px) and (max-width: 1680px) {
+  .dashboard .container-fluid {
+    min-width: 1560px;
+  }
+  .dashboard .container-fluid #left {
+    width: 292px;
+  }
+  .dashboard .container-fluid #left #extend_company {
+    left: -438px;
+    width: 584px;
+  }
+  .dashboard .container-fluid #left #extend_company.active {
+    left: 146px;
+  }
+  .dashboard .container-fluid #left #extend_department {
+    left: -292px;
+    width: 584px;
+  }
+  .dashboard .container-fluid #left #extend_department.active {
+    left: 292px;
+  }
+  .dashboard .container-fluid #left .add-company,
+  .dashboard .container-fluid #left .add-department {
+    width: 145px;
+  }
+  .dashboard .container-fluid #center {
+    margin-left: -302px;
+    padding-left: 302px;
+    margin-right: -152px;
+    padding-right: 152px;
+  }
+  .dashboard .container-fluid #right {
+    width: 142px;
+  }
+  .dashboard .container-fluid #right #extend_user {
+    width: 568px;
+  }
+  .dashboard .container-fluid #right #extend_user.active {
+    left: -568px;
+  }
+  .dashboard .container-fluid #right .add-user {
+    width: 141px;
+  }
+  .dashboard .container-fluid .subscriber .order .scrollbar {
+    right: 172px;
+  }
+}
+@media screen and (min-width: 1681px) and (max-width: 1780px) {
+  .dashboard .container-fluid {
+    min-width: 1560px;
+  }
+  .dashboard .container-fluid #left {
+    width: 292px;
+  }
+  .dashboard .container-fluid #left #extend_company {
+    left: -438px;
+    width: 584px;
+  }
+  .dashboard .container-fluid #left #extend_company.active {
+    left: 146px;
+  }
+  .dashboard .container-fluid #left #extend_department {
+    left: -292px;
+    width: 584px;
+  }
+  .dashboard .container-fluid #left #extend_department.active {
+    left: 292px;
+  }
+  .dashboard .container-fluid #left .add-company,
+  .dashboard .container-fluid #left .add-department {
+    width: 145px;
+  }
+  .dashboard .container-fluid #center {
+    margin-left: -302px;
+    padding-left: 302px;
+    margin-right: -152px;
+    padding-right: 152px;
+  }
+  .dashboard .container-fluid #right {
+    width: 142px;
+  }
+  .dashboard .container-fluid #right #extend_user {
+    width: 568px;
+  }
+  .dashboard .container-fluid #right #extend_user.active {
+    left: -568px;
+  }
+  .dashboard .container-fluid #right .add-user {
+    width: 141px;
+  }
+}
+@media screen and (min-width: 1781px) and (max-width: 1881px) {
+  .dashboard .container-fluid {
+    min-width: 1560px;
+  }
+  .dashboard .container-fluid #left {
+    width: 292px;
+  }
+  .dashboard .container-fluid #left #extend_company {
+    left: -438px;
+    width: 584px;
+  }
+  .dashboard .container-fluid #left #extend_company.active {
+    left: 146px;
+  }
+  .dashboard .container-fluid #left #extend_department {
+    left: -292px;
+    width: 584px;
+  }
+  .dashboard .container-fluid #left #extend_department.active {
+    left: 292px;
+  }
+  .dashboard .container-fluid #left .add-company,
+  .dashboard .container-fluid #left .add-department {
+    width: 145px;
+  }
+  .dashboard .container-fluid #center {
+    margin-left: -302px;
+    padding-left: 302px;
+    margin-right: -152px;
+    padding-right: 152px;
+  }
+  .dashboard .container-fluid #right {
+    width: 142px;
+  }
+  .dashboard .container-fluid #right #extend_user {
+    width: 568px;
+  }
+  .dashboard .container-fluid #right #extend_user.active {
+    left: -568px;
+  }
+  .dashboard .container-fluid #right .add-user {
+    width: 141px;
+  }
+}
+@media screen and (min-width: 1881px) {
+  .dashboard .container-fluid {
+    min-width: 1560px;
+  }
+  .dashboard .container-fluid #left {
+    width: 292px;
+  }
+  .dashboard .container-fluid #left #extend_company {
+    left: -438px;
+    width: 584px;
+  }
+  .dashboard .container-fluid #left #extend_company.active {
+    left: 146px;
+  }
+  .dashboard .container-fluid #left #extend_department {
+    left: -292px;
+    width: 584px;
+  }
+  .dashboard .container-fluid #left #extend_department.active {
+    left: 292px;
+  }
+  .dashboard .container-fluid #left .add-company,
+  .dashboard .container-fluid #left .add-department {
+    width: 145px;
+  }
+  .dashboard .container-fluid #center {
+    margin-left: -302px;
+    padding-left: 302px;
+    margin-right: -152px;
+    padding-right: 152px;
+  }
+  .dashboard .container-fluid #right {
+    width: 142px;
+  }
+  .dashboard .container-fluid #right #extend_user {
+    width: 568px;
+  }
+  .dashboard .container-fluid #right #extend_user.active {
+    left: -568px;
+  }
+  .dashboard .container-fluid #right .add-user {
+    width: 141px;
+  }
+}
+.dashboard .content {
+  height: 100%;
+  margin-bottom: -60px;
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+.dashboard p {
+  margin: 0;
+}
+.dashboard .title {
+  display: inline-block;
+  width: 100%;
+  background: #81d8d0;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+}
+.dashboard #dashboard {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+}
+.dashboard #dashboard > div {
+  display: inline-block;
+}
+.dashboard #left {
+  position: relative;
+  z-index: 3;
+  float: left;
+  width: 232px;
+  height: 100%;
+}
+.dashboard #left .title {
+  position: relative;
+  z-index: 5;
+}
+.dashboard #left .title .fa {
+  margin-left: 4px;
+}
+.dashboard #left .sort-highlight {
+  height: 113px;
+  width: 100%;
+  border: 1px solid #39baae;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.dashboard #left #company,
+.dashboard #left #department {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  border-right: 1px solid #e5e5e5;
+}
+.dashboard #left #extend_company,
+.dashboard #left #extend_department {
+  position: absolute;
+  display: none;
+  width: 464px;
+  height: 100%;
+  border: 1px solid #e5e5e5;
+  background: #f2f2f2;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.dashboard #left #extend_company {
+  left: -348px;
+  z-index: 4;
+}
+.dashboard #left #extend_company.active {
+  display: block;
+  left: 116px;
+}
+.dashboard #left #extend_department {
+  left: -348px;
+  z-index: 2;
+}
+.dashboard #left #extend_department.active {
+  display: block;
+  left: 232px;
+}
+.dashboard #left #company {
+  float: left;
+  z-index: 5;
+}
+.dashboard #left #department {
+  float: right;
+  z-index: 3;
+}
+.dashboard #left .scroll-up,
+.dashboard #left .scroll-down {
+  height: 22px;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  padding: 0;
+  background: #f2f2f2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.dashboard #left .scroll-up-wrap {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  height: 22px;
+}
+.dashboard #left .scroll-up-wrap:hover .scroll-up {
+  top: 0;
+  box-shadow: 0 2px 2px #d9d9d9;
+}
+.dashboard #left .scroll-up {
+  top: -22px;
+  position: absolute;
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  box-shadow: none;
+  -webkit-transition: top 0.15s;
+  -moz-transition: top 0.15s;
+  -o-transition: top 0.15s;
+  transition: top 0.15s;
+}
+.dashboard #left .scroll-down {
+  position: absolute;
+  top: 787px;
+  box-shadow: 0 -2px 2px #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+.dashboard #left .column {
+  position: relative;
+  margin-top: -20px;
+  margin-bottom: 0;
+  padding-top: 20px;
+  width: 100%;
+}
+.dashboard #left .column .element {
+  position: relative;
+  padding: 22px 0 21px;
+  height: 113px;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+.dashboard #left .column .element:hover {
+  background: #fcfcfc;
+  -webkit-box-shadow: 2px 2px 2px #bfbfbf;
+  -moz-box-shadow: 2px 2px 2px #bfbfbf;
+  box-shadow: 2px 2px 2px #bfbfbf;
+}
+.dashboard #left .column .element.active {
+  background: #fff;
+}
+.dashboard #left .column .element.active:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 112px;
+  background: #04af09;
+}
+.dashboard #left .column .element .next-level-count {
+  margin-top: -20px;
+  width: 25px;
+  height: 108px;
+  position: absolute;
+}
+.dashboard #left .column .element .next-level-count .fa {
+  margin: 2px 0;
+  vertical-align: middle;
+  color: #04af09;
+  display: block;
+}
+.dashboard #left .column .element .next-level-count .fa.active {
+  color: #c00;
+}
+.dashboard #left .column .element .icon {
+  width: 50px;
+  height: 50px;
+}
+.dashboard #left .column .element .icon.img-icon {
+  margin: auto;
+  color: #555555;
+}
+.dashboard #left .column .element .icon.img-icon .fa-send {
+  font-size: 3.5em;
+}
+.dashboard #left .column .element .icon.img-icon .fa-suitcase {
+  font-size: 3.5em;
+}
+.dashboard #left .column .element .local-badge {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  display: inline-block;
+  color: #c00;
+}
+.dashboard #left .column .element .local-badge .badge-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  text-align: center;
+  width: 24px;
+  height: 29px;
+  line-height: 29px;
+  font-size: 16px;
+  color: #f2f2f2;
+}
+.dashboard #left .column .element .element-title {
+  padding-top: 4px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dashboard #left .add-company,
+.dashboard #left .add-department {
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+  background: #fff;
+  position: absolute;
+  width: 115px;
+}
+.dashboard #left .add-company:hover,
+.dashboard #left .add-department:hover {
+  background: #fcfcfc;
+}
+.dashboard #left .add-company.fixed,
+.dashboard #left .add-department.fixed {
+  top: 700px;
+  border-top: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 -2px 2px #bfbfbf;
+  -moz-box-shadow: 0 -2px 2px #bfbfbf;
+  box-shadow: 0 -2px 2px #bfbfbf;
+}
+.dashboard #left .add-company .icon,
+.dashboard #left .add-department .icon {
+  display: block;
+  height: 110px;
+  width: 100%;
+}
+.dashboard #left .add-company .icon .group-add-icon :first-child,
+.dashboard #left .add-department .icon .group-add-icon :first-child {
+  font-size: 3.5em;
+  margin-top: -25px;
+}
+.dashboard #left .add-company .icon .group-add-icon .fa-plus,
+.dashboard #left .add-department .icon .group-add-icon .fa-plus {
+  margin-top: -32px;
+}
+.dashboard #left .add-department .icon .group-add-icon :first-child {
+  font-size: 3.5em;
+  margin-top: -25px;
+}
+.dashboard #left .add-department .icon .group-add-icon .fa-plus {
+  margin-top: -36px;
+}
+.dashboard #center {
+  position: relative;
+  background: #f9f9f9;
+  width: 100%;
+  min-width: 900px;
+  height: 100%;
+  margin-left: -242px;
+  padding-left: 242px;
+  margin-right: -122px;
+  padding-right: 122px;
+  overflow: hidden;
+  /**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2016/2/19 10:34
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+  /**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2016/2/19 10:51
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+}
+.dashboard #center .dashboard-gateway {
+  width: 100%;
+  height: 100%;
+}
+.dashboard #center .dashboard-gateway .nav {
+  background: #fff;
+}
+.dashboard #center .dashboard-gateway .tab-content {
+  margin-top: -42px;
+  padding-top: 42px;
+  height: 100%;
+}
+.dashboard #center .dashboard-gateway .tab-content .tab-pane {
+  height: 100%;
+}
+.dashboard #center .dashboard-gateway .tab-content #gateway {
+  min-height: 155px;
+  height: 21%;
+}
+.dashboard #center .dashboard-gateway .tab-content #vlan_row {
+  height: 27%;
+}
+.dashboard #center .dashboard-gateway .gateway-info {
+  height: 60px;
+  padding: 10px 0 4px 20px;
+  background: #fff;
+  text-align: left;
+}
+.dashboard #center .dashboard-gateway .gateway-info .unlock-vno {
+  float: right;
+  position: relative;
+  top: -26px;
+  right: 20px;
+}
+.dashboard #center .dashboard-gateway .gateway-info .user-list {
+  float: right;
+  position: relative;
+  top: -26px;
+  right: 10px;
+}
+.dashboard #center .dashboard-gateway .gateway-info .name {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.dashboard #center .dashboard-gateway .gateway-info .breadcrumb {
+  background: #fff;
+  padding: 0;
+}
+.dashboard #center .dashboard-gateway .gateway-info .breadcrumb > li + li:before {
+  color: #777777;
+}
+.dashboard #center .dashboard-gateway .gateway-info .breadcrumb li {
+  cursor: default;
+}
+.dashboard #center .dashboard-gateway .gateway-info .breadcrumb li:hover {
+  color: #39baae;
+}
+.dashboard #center .dashboard-gateway .gateway-info .breadcrumb li:hover span {
+  display: inline-block;
+}
+.dashboard #center .dashboard-gateway .gateway-info .breadcrumb li span {
+  color: #39baae;
+  margin-left: 5px;
+  display: none;
+  text-align: right;
+}
+.dashboard #center .dashboard-gateway .gateway-info address {
+  font-weight: bold;
+  margin: 0;
+}
+.dashboard #center .dashboard-gateway #op_area {
+  margin-top: -60px;
+  padding-top: 60px;
+  height: 100%;
+}
+.dashboard #center .dashboard-gateway #chart_row,
+.dashboard #center .dashboard-gateway #gateway,
+.dashboard #center .dashboard-gateway #vlan_row,
+.dashboard #center .dashboard-gateway #wireless_row {
+  /*最小高度155px*/
+  background: #fff;
+  width: 100%;
+}
+.dashboard #center .dashboard-gateway #chart_row,
+.dashboard #center .dashboard-gateway #wireless_row {
+  height: 25%;
+}
+.dashboard #center .dashboard-gateway #gateway {
+  height: 24%;
+}
+.dashboard #center .dashboard-gateway #vlan_row {
+  height: 26%;
+}
+.dashboard #center .dashboard-gateway #chart_row {
+  border: 1px solid #e5e5e5;
+  clear: both;
+}
+.dashboard #center .dashboard-gateway #chart_row #connect_device,
+.dashboard #center .dashboard-gateway #chart_row #online_time,
+.dashboard #center .dashboard-gateway #chart_row #status,
+.dashboard #center .dashboard-gateway #chart_row #line_chart {
+  float: left;
+  vertical-align: middle;
+  border-left: 1px solid #e5e5e5;
+  height: 100%;
+  width: 25%;
+}
+.dashboard #center .dashboard-gateway #chart_row #connect_device:first-child,
+.dashboard #center .dashboard-gateway #chart_row #online_time:first-child,
+.dashboard #center .dashboard-gateway #chart_row #status:first-child,
+.dashboard #center .dashboard-gateway #chart_row #line_chart:first-child {
+  border-left: none;
+}
+.dashboard #center .dashboard-gateway #chart_row #connect_device {
+  position: relative;
+  padding-top: 2px;
+}
+.dashboard #center .dashboard-gateway #chart_row #connect_device .connect-info {
+  display: none;
+  text-align: center;
+  width: 110px;
+  position: absolute;
+  left: 50%;
+  margin-left: -55px;
+  top: 50%;
+  margin-top: -50px;
+}
+.dashboard #center .dashboard-gateway #chart_row #connect_device .connect-count {
+  font-size: 5em;
+  line-height: 80px;
+}
+.dashboard #center .dashboard-gateway #chart_row #status {
+  padding: 10px 0 0 20px;
+}
+.dashboard #center .dashboard-gateway #chart_row #loads_ram,
+.dashboard #center .dashboard-gateway #chart_row #flow {
+  height: 50%;
+}
+.dashboard #center .dashboard-gateway #gateway .router-pic {
+  height: 155px;
+  vertical-align: middle;
+}
+.dashboard #center .dashboard-gateway #vlan_row .row-inner,
+.dashboard #center .dashboard-gateway #wireless_row .row-inner {
+  border: solid 1px #e5e5e5;
+  height: 100%;
+}
+.dashboard #center .dashboard-gateway #vlan_row .title,
+.dashboard #center .dashboard-gateway #wireless_row .title {
+  float: left;
+  width: 20px;
+  height: 100%;
+}
+.dashboard #center .dashboard-gateway #vlan_row .title span,
+.dashboard #center .dashboard-gateway #wireless_row .title span {
+  display: block;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row {
+  overflow: hidden;
+  float: left;
+  margin-left: -20px;
+  padding-left: 20px;
+  width: 100%;
+  height: 100%;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element {
+  z-index: 1;
+  margin: 0 -2px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 20%;
+  max-width: 200px;
+  padding: 5px;
+  border-right: 1px solid #e5e5e5;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .element-inner,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .element-inner,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element .element-inner,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element .element-inner {
+  height: 100%;
+  background: #f2f2f2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element:first-child,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element:first-child,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element:first-child,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element:first-child {
+  border-left: 1px solid #e5e5e5;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .port-number,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .port-number,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element .port-number,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element .port-number {
+  font-size: 18px;
+  padding: 4px 0;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .vlan-type,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .vlan-type,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element .vlan-type,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element .vlan-type {
+  display: block;
+  padding: 4px;
+  font-size: 20px;
+  vertical-align: bottom;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .list-unstyled,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .list-unstyled,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element .list-unstyled,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element .list-unstyled {
+  text-indent: 1em;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .list-unstyled li,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .list-unstyled li,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element .list-unstyled li,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element .list-unstyled li {
+  margin: auto;
+  width: 160px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element a,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element a,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element a,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element a {
+  color: #333;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .add,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .add,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element .add,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element .add {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .add .group-add-icon :first-child,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .add .group-add-icon :first-child,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element .add .group-add-icon :first-child,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element .add .group-add-icon :first-child {
+  margin-top: -29px;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .add .group-add-icon .fa-plus,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .add .group-add-icon .fa-plus,
+.dashboard #center .dashboard-gateway #vlan_row .wireless-row .element .add .group-add-icon .fa-plus,
+.dashboard #center .dashboard-gateway #wireless_row .wireless-row .element .add .group-add-icon .fa-plus {
+  margin-top: -36px;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-row .element .add .group-add-icon :first-child,
+.dashboard #center .dashboard-gateway #wireless_row .vlan-row .element .add .group-add-icon :first-child {
+  font-size: 3.5em;
+}
+.dashboard #center .dashboard-gateway #vlan_row {
+  padding-bottom: 5px;
+}
+.dashboard #center .dashboard-gateway #vlan_row .title {
+  line-height: 34px;
+}
+.dashboard #center .dashboard-gateway #vlan_row .vlan-type {
+  border-top: 3px solid #fff;
+}
+.dashboard #center .dashboard-gateway #vlan_row .list-unstyled {
+  padding-top: 0;
+  margin: 0 auto 5px auto;
+  border-top: 1px dashed #f2f2f2;
+}
+.dashboard #center .dashboard-gateway #vlan_row .extra-operation {
+  border-top: 1px dashed #777777;
+}
+.dashboard #center .dashboard-gateway #vlan_row .extra-operation a {
+  display: inline-block;
+  padding: 6px 15px 0 15px;
+}
+.dashboard #center .dashboard-gateway #wireless_row {
+  padding-top: 5px;
+}
+.dashboard #center .dashboard-gateway #wireless_row .title {
+  line-height: 21px;
+}
+.dashboard #center .dashboard-gateway #wireless_row .vlan-type {
+  border-bottom: 3px solid #fff;
+}
+.dashboard #center .dashboard-gateway #wireless_row .list-unstyled {
+  padding-top: 5px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #f2f2f2;
+}
+.dashboard #center .dashboard-gateway #wireless_row .extra-operation {
+  border-top: 1px dashed #777777;
+}
+.dashboard #center .dashboard-gateway #wireless_row .extra-operation a {
+  display: inline-block;
+  padding: 7px 15px;
+}
+.dashboard #center #brand #H_DomainModal .btn-group {
+  display: block;
+  height: 30px;
+  padding: 0 0 0 35px;
+  text-align: left;
+}
+.dashboard #center #brand #H_DomainModal .btn-group .btn {
+  padding: 4px 5px 4px 5px;
+}
+.dashboard #center #brand #H_DomainModal .btn-group .btn.active {
+  color: #fff;
+  background-color: #3498db;
+  border-color: #258cd1;
+}
+.dashboard #center #brand #H_DomainModal .domain-wrap {
+  margin-top: 20px;
+}
+.dashboard #center #brand #H_DomainModal .domain-wrap .input-group {
+  width: 300px;
+  margin: auto;
+}
+.dashboard #center #brand .setting-group-wrap {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group {
+  min-height: 50px;
+  margin: 0 20px 0 20px;
+  padding: 15px 0 15px 0;
+  text-align: left;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .left,
+.dashboard #center #brand .setting-group-wrap .setting-group .right {
+  display: inline-block;
+  vertical-align: middle;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .left.top,
+.dashboard #center #brand .setting-group-wrap .setting-group .right.top {
+  vertical-align: top;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .left {
+  width: 200px;
+  font-size: 16px;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .left .help-block {
+  font-size: 14px;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .right {
+  padding: 0 0 0 50px;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .right .form-control {
+  height: 32px;
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .right .btn {
+  padding: 5px 6px 5px 6px;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .right .message {
+  height: auto;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .right.theme-color-frame {
+  padding: 0 0 0 25px;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .right.theme-color-frame .or {
+  display: inline-block;
+  height: 48px;
+  background: #fff;
+  font-size: 16px;
+  line-height: 48px;
+  position: relative;
+  top: -158px;
+  left: -7px;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .color-title {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group .save-color {
+  padding: 4px 5px 4px 5px;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group + .setting-group {
+  border-top: 1px dashed #d9d9d9;
+}
+.dashboard #center #brand .setting-group-wrap .setting-group-inner {
+  width  : 750px;
+  margin : auto;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list {
+  height: auto;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list.wrap {
+  width: 500px;
+  height: 300px;
+  padding: 0 0 0 25px;
+  border-left: 1px solid #cccccc;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list.custom {
+  text-align: left;
+  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+  border-top: 1px dashed #d9d9d9;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list.custom input {
+  float: right;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list.custom .custom-color {
+  position: relative;
+  left: 66px;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list.custom .sp-replacer {
+  width: 56px;
+  height: 56px;
+  background: #fff;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list.custom .sp-replacer .sp-preview {
+  display: block;
+  margin: 0 10px 10px 0;
+  padding: 5px;
+  float: left;
+  overflow: hidden;
+  width: 56px;
+  height: 56px;
+  border: 4px solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list a {
+  display: block;
+  margin: 0 10px 10px 0;
+  padding: 5px;
+  float: left;
+  overflow: hidden;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border: 4px solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list a:hover,
+.dashboard #center #brand .setting-group-wrap .theme-color-list a.checked {
+  background: #fff;
+  border: none;
+  width: 56px;
+  height: 56px;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list a:hover span,
+.dashboard #center #brand .setting-group-wrap .theme-color-list a.checked span {
+  display: block;
+  background: transparent;
+  border: 3px solid #fff;
+  width: 46px;
+  height: 46px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.dashboard #center #brand .setting-group-wrap .theme-color-list a.checked span {
+  background: transparent url('/static/img/dashboard/color-check.png') 50% 50% no-repeat;
+}
+.dashboard #center .subscription-wrap {
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  padding: 20px 10px 0 10px;
+  width: 100%;
+  height: 100%;
+}
+.dashboard #center .subscription-wrap .sort-highlight {
+  border: 1px solid #39baae;
+  width: 200px;
+  height: 203px;
+  display: inline-block;
+  margin: 0 5px 15px 5px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.dashboard #center .subscription-wrap .item {
+  background: #fff;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px 15px 5px;
+  padding: 10px 10px 0 10px;
+  vertical-align: top;
+  text-align: center;
+  width: 200px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.dashboard #center .subscription-wrap .item[data-status="disabled"] {
+  color: #999999;
+  background: #f2f2f2;
+}
+.dashboard #center .subscription-wrap .item ul {
+  min-height: 118px;
+}
+.dashboard #center .subscription-wrap .item.add {
+  cursor: pointer;
+  height: 203px;
+  transition: 0.15s all;
+  color: #aaaaaa;
+}
+.dashboard #center .subscription-wrap .item.add:hover {
+  color: #39baae;
+}
+.dashboard #center .subscription-wrap .item.add .fa {
+  font-size: 10em;
+  position: relative;
+  margin-top: -70px;
+  top: 50%;
+}
+.dashboard #center .subscription-wrap .item .header {
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: auto auto 10px auto;
+  font-size: 18px;
+}
+.dashboard #center .subscription-wrap .item ul {
+  margin: 0;
+  padding: 10px 0 10px 0;
+  border: 1px dashed #bfbfbf;
+  border-left: none;
+  border-right: none;
+}
+.dashboard #center .subscription-wrap .item ul > li {
+  padding: 2px 0 2px 0;
+}
+.dashboard #center .subscription-wrap .item .operate > div {
+  display: inline-block;
+  width: 25%;
+  margin: -2px;
+}
+.dashboard #center .subscription-wrap .item .operate > div .btn {
+  padding: 4px 8px;
+  font-size: 24px;
+  background: transparent;
+}
+.dashboard #center .subscription-wrap .item .operate > div .switch[data-status="disabled"]:hover {
+  color: #f90;
+}
+.dashboard #center .subscription-wrap .item .operate > div .switch[data-status="enabled"]:hover {
+  color: #04af09;
+}
+.dashboard #center .subscription-wrap .item .operate > div .delete:hover {
+  color: #c00;
+}
+.dashboard #center .subscription-wrap .item .operate > div .edit:hover {
+  color: #a8e4df;
+}
+.dashboard #center .subscription-wrap .item .operate > div .stick:hover {
+  color: #3498db;
+}
+.dashboard #center .subscription-add {
+  text-align: left;
+}
+.dashboard #center .subscription-add form {
+  width: 400px;
+  margin: auto;
+}
+.dashboard #center .subscription-add .type-label {
+  margin: 0 20px 0 5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.dashboard #center .subscription-add .help-block {
+  font-size: 14px;
+  line-height: 16px;
+  vertical-align: top;
+  float: right;
+}
+.dashboard #center .subscription-add .bw-input {
+  width: 120px;
+}
+.dashboard #center .subscription-add .bw-slider {
+  width: 250px;
+  float: right;
+  margin: -30px 0 0 0;
+}
+.dashboard #right {
+  position: relative;
+  z-index: 1;
+  float: right;
+  border-left: 1px solid #e5e5e5;
+  width: 112px;
+  height: 100%;
+  vertical-align: top;
+}
+.dashboard #right .sort-highlight {
+  height: 113px;
+  width: 100%;
+  border: 1px solid #39baae;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.dashboard #right .title {
+  position: relative;
+  z-index: 5;
+}
+.dashboard #right .title .fa {
+  margin-right: 4px;
+}
+.dashboard #right #user {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+.dashboard #right #extend_user {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 448px;
+  height: 100%;
+  background: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.dashboard #right #extend_user.active {
+  display: block;
+  left: -448px;
+}
+.dashboard #right .scroll-up {
+  height: 22px;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  padding: 0;
+  background: #f2f2f2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  top: -22px;
+  position: absolute;
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  box-shadow: none;
+  -webkit-transition: top 0.15s;
+  -moz-transition: top 0.15s;
+  -o-transition: top 0.15s;
+  transition: top 0.15s;
+  border-left: 1px solid #d9d9d9;
+}
+.dashboard #right .scroll-down {
+  height: 22px;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  padding: 0;
+  background: #f2f2f2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  position: absolute;
+  top: 787px;
+  box-shadow: 0 -2px 2px #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #d9d9d9;
+}
+.dashboard #right .scroll-up-wrap {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  height: 22px;
+}
+.dashboard #right .scroll-up-wrap:hover .scroll-up {
+  top: 0;
+  box-shadow: 0 2px 2px #d9d9d9;
+}
+.dashboard #right .column {
+  position: relative;
+  margin-top: -20px;
+  padding-top: 20px;
+}
+.dashboard #right .column .element {
+  height: 113px;
+  padding: 10px 0 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.dashboard #right .column .element .icon {
+  width: 50px;
+}
+.dashboard #right .column .element .element-title {
+  padding-top: 6px;
+}
+.dashboard #right .column .element .element-title .fa {
+  color: #c00;
+}
+.dashboard #right .column .element .element-title .fa.active {
+  color: #04af09;
+}
+.dashboard #right .column .element .element-title .staff-name,
+.dashboard #right .column .element .element-title .vlan-name {
+  padding: 0 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dashboard #right .column .element .element-title .vlan-name {
+  font-weight: bold;
+}
+.dashboard #right .add-user {
+  border-bottom: 1px solid #e5e5e5;
+  height: 110px;
+  background: #fff;
+  position: absolute;
+  width: 111px;
+}
+.dashboard #right .add-user:hover {
+  background: #fcfcfc;
+}
+.dashboard #right .add-user.fixed {
+  top: 697px;
+  border-top: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 -2px 2px #bfbfbf;
+  -moz-box-shadow: 0 -2px 2px #bfbfbf;
+  box-shadow: 0 -2px 2px #bfbfbf;
+}
+.dashboard #right .add-user .icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.dashboard #right .add-user .icon .group-add-icon :first-child {
+  margin-top: -29px;
+}
+.dashboard #right .add-user .icon .group-add-icon .fa-plus {
+  margin-top: -36px;
+}
+.dashboard #search_bar {
+  height: 100%;
+}
+.dashboard #search_bar .close-search {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  float: right;
+  margin: 10px;
+  color: #777777;
+}
+.dashboard #search_bar .close-search:hover {
+  color: #555555;
+}
+.dashboard #search_bar .close-search .fa {
+  font-size: 20px;
+}
+.dashboard #search_bar .search-wrap {
+  position: relative;
+  z-index: 2;
+  padding: 20px 0;
+  width: 80%;
+  margin: auto;
+}
+.dashboard #search_bar .search-wrap .search-input {
+  padding-left: 3em;
+  padding-right: 3em;
+  -webkit-border-radius: 21px;
+  -moz-border-radius: 21px;
+  -o-border-radius: 21px;
+  border-radius: 21px;
+}
+.dashboard #search_bar .search-wrap .fa-search {
+  position: absolute;
+  top: 32px;
+  left: 4%;
+  font-size: 25px;
+  color: #959595;
+  transition: color ease-in-out 0.15s;
+}
+.dashboard #search_bar .search-wrap .fa-search.focus {
+  color: #555;
+}
+.dashboard #search_bar .search-wrap .clean-input {
+  display: inline-block;
+  position: absolute;
+  right: 2%;
+  top: 26px;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+}
+.dashboard #search_bar .search-wrap .clean-input:hover .fa {
+  color: #555;
+}
+.dashboard #search_bar .search-wrap .clean-input .fa {
+  display: inline-block;
+  font-size: 16px;
+  color: #959595;
+  transition: color ease-in-out 0.15s;
+}
+.dashboard #search_bar .nav {
+  position: relative;
+  z-index: 2;
+}
+.dashboard #search_bar .nav li.active a {
+  background: #fff;
+  color: #444;
+}
+.dashboard #search_bar .nav li.active a:hover {
+  background: #fff;
+  color: #444;
+}
+.dashboard #search_bar .nav li a {
+  color: #6a6a6a;
+}
+.dashboard #search_bar .nav li a:hover {
+  background: #e5e5e5;
+  color: #5e5e5e;
+}
+.dashboard #search_bar .tab-content {
+  position: relative;
+  z-index: 1;
+  margin-top: -124px;
+  padding-top: 124px;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.dashboard #search_bar .tab-content .tab-pane {
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.dashboard .ui-dialog-statusbar .ignore {
+  margin: 0;
+}
+.dashboard .ui-dialog-statusbar .ignore-checkbox {
+  margin: 0 4px 0 0;
+  height: 16px;
+  width: 16px;
+}
+.dashboard .user-setting td + td {
+  padding-left: 2em;
+  width: 70%;
+  text-align: left;
+}
+.dashboard .user-setting .bootstrap-switch {
+  text-indent: 0;
+  text-align: center;
+  height: 32px;
+}
+.dashboard .user-setting .bootstrap-switch span {
+  height: 32px;
+  padding: 0;
+  line-height: 32px;
+}
+.dashboard .user-setting .form-control {
+  display: inline-block;
+  min-width: 160px;
+  max-width: 200px;
+  height: 32px;
+  vertical-align: middle;
+  padding: 5px 12px;
+}
+.dashboard .user-setting td {
+  height: 64px;
+  text-align: right;
+  border-top: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  vertical-align: bottom;
+  line-height: 32px;
+}
+.dashboard .user-setting .setting-value {
+  min-width: 70px;
+  text-align: left;
+  display: inline-block;
+}
+.dashboard .user-setting .btn-group .btn {
+  padding: 5px 6px 5px 6px;
+}
+.dashboard .user-setting tr + tr {
+  border-top: 1px dashed #d9d9d9;
+}
+.dashboard .user-setting .select2-container--default .select2-selection--single {
+  height: 32px;
+}
+.dashboard .user-setting .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 32px;
+}
+.dashboard .user-setting .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 32px;
+  top: 0;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2016/1/20 10:39
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+/*网关列表*/
+.buy-plan-for-assign {
+  margin-top: -45px;
+  margin-right: 5%;
+}
+.gateway-list {
+  max-width: 1060px;
+  margin: auto;
+  height: 100%;
+}
+.gateway-list .frame {
+  height: 710px;
+  padding-top: 0;
+}
+.gateway-list .scrollbar {
+  height: 710px;
+}
+.gateway-list .product-list {
+  height: auto;
+  width: 100%;
+}
+.gateway-list .form-group .editable-input {
+  margin-right: 10px;
+  display: inline-block;
+}
+.gateway-list .form-group .select2 {
+  font-size: 14px;
+  width: 160px !important;
+}
+.gateway-list .form-group .editable-buttons {
+  display: inline-block;
+}
+.gateway-list .form-group .editable-buttons .editable-submit {
+  margin-right: 5px;
+}
+.gateway-list .table {
+  margin: 0;
+}
+.gateway-list .table.list thead td {
+  padding: 0;
+}
+.gateway-list .table .pic {
+  margin: auto;
+  width: 80px;
+  height: 80px;
+}
+.gateway-list .table .pic img {
+  max-width: 80px;
+  max-height: 80px;
+}
+.gateway-list .table tbody tr {
+  background: #fff;
+}
+.gateway-list .table tbody tr.bind {
+  background: #e2f6f4;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2015/12/8 16:40
+ * Description: 第三方插件样式
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+/*colorPicker:spectrum.css*/
+.sp-replacer {
+  padding: 0;
+  border: none;
+}
+.sp-preview {
+  margin-right: 0;
+}
+.sp-dd {
+  display: none;
+}
+/*Sly,jquery滚动插件*/
+.frame {
+  padding: 20px 0 20px;
+  width: 100%;
+  overflow: hidden;
+  height: 730px;
+  background: #fff;
+}
+.frame .slide {
+  margin: auto;
+}
+.scrollbar {
+  position: absolute;
+  right: 0;
+  width: 4px;
+  height: 730px;
+  background: #ddd;
+  line-height: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.scrollbar .handle {
+  width: 100%;
+  height: 100px;
+  /* overriden if dynamicHandle: 1 */
+  transition: height 0.2s;
+  background: #666;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.scrollbar .handle .mouse-area {
+  position: absolute;
+  top: 0;
+  left: -13px;
+  width: 30px;
+  height: 100%;
+}
+/* 图片裁切 cropper */
+.circle .cropper-crop-box,
+.circle .cropper-view-box {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.nav-tabs {
+  text-align: center;
+  border-bottom: 3px solid #ddd;
+}
+.nav-tabs.top-border {
+  border-top: 1px solid #f2f2f2;
+}
+.nav-tabs li {
+  float: none;
+  display: inline-block;
+  bottom: -2px;
+}
+.nav-tabs li .fa {
+  margin-right: 4px;
+}
+.nav-tabs li a {
+  font-size: 16px;
+  position: relative;
+  background: #fff;
+  color: #6a6a6a;
+  cursor: pointer;
+  border: none;
+}
+.nav-tabs li a:hover {
+  border: none;
+  background: #fff;
+  border-bottom: 3px solid #39baae;
+}
+.nav-tabs li.active a {
+  background: #fff;
+  color: #39baae;
+  border: none;
+  border-bottom: 3px solid #39baae;
+}
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus {
+  border: none;
+  color: #39baae;
+  background-color: #fff;
+  border-bottom: 3px solid #39baae;
+}
+.ui-dialog-footer button.ui-dialog-autofocus {
+  background-color: #39baae;
+  border-color: #277f77;
+}
+.ui-dialog-footer button.ui-dialog-autofocus:hover,
+.ui-dialog-footer button.ui-dialog-autofocus:focus,
+.ui-dialog-footer button.ui-dialog-autofocus:active {
+  background-color: #2d9389;
+  border-color: #277f77;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-slider .ui-slider-range {
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -ms-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
+}
+.valid-fail {
+  border: 1px solid #c00 !important;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff0000 !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff0000 !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff0000 !important;
+}
+/*验证提示信息样式*/
+.formError .formErrorContent {
+  position: relative;
+  margin: 5px 0 0;
+  padding: 0 10px;
+  width: 100%;
+  min-width: 120px;
+  color: #c00;
+  border: none;
+  font-size: 14px;
+  background: none;
+  box-shadow: none;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2016/1/28 14:37
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+
+ */
+/*优先级qos*/
+.qos-btn-group {
+  margin-top: -45px;
+}
+.qos-table .table {
+  margin: auto;
+  max-width: 1060px;
+}
+.qos-table .table th,
+.qos-table .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.qos-table .btn-link {
+  padding: 8px;
+}
+.qos-table .btn-link span {
+  color: #3498db;
+}
+.qos-table .modal {
+  padding-top: 100px;
+}
+.qos-table .sort-highlight {
+  border-left: 2px solid #81d8d0;
+  border-right: 2px solid #81d8d0;
+  background: #f2f2f2;
+}
+.qos-table .description,
+.qos-table .width-h3 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.qos-table .description {
+  margin: 0;
+}
+.qos-table .width-h3 {
+  width: 300px;
+}
+/*黑名单blacklist*/
+.blacklist-btn-group {
+  margin-top: -45px;
+}
+#btn_add_group {
+  color: #3498db;
+  display: inline-block;
+}
+/*黑名单与优先级的模板*/
+.temp-wrap {
+  height: auto;
+  border-bottom: 2px solid #eeeeee;
+}
+.temp-wrap .group-wrap,
+.temp-wrap .template-wrap,
+.temp-wrap .add-wrap {
+  margin: auto;
+  padding: 0 8px 5px 8px;
+  width: 100%;
+  max-width: 1060px;
+}
+.temp-wrap .group-wrap .text-muted,
+.temp-wrap .template-wrap .text-muted,
+.temp-wrap .add-wrap .text-muted {
+  margin: 8px;
+}
+.temp-wrap .group-wrap {
+  border-bottom: 2px solid #eeeeee;
+}
+.temp-wrap .btn {
+  color: #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.temp-wrap .btn .close {
+  display: inline-block;
+  color: #f2f2f2;
+  font-size: 20px;
+  line-height: 30px;
+  background: #c00;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  width: 50px;
+  height: 32px;
+  margin: -6px -11px -6px 5px;
+  cursor: default;
+}
+.temp-wrap .btn .close:hover {
+  background: #990000;
+}
+.temp-wrap .element {
+  padding: 5px 10px;
+  margin-top: 5px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #555555;
+}
+.temp-wrap .element:hover {
+  background: #3c3c3c;
+}
+.temp-wrap .element + .element {
+  margin-left: 8px;
+}
+.temp-wrap .template {
+  display: inline-block;
+}
+.temp-wrap .template.active {
+  background: #3498db;
+}
+.temp-wrap .template.active:hover {
+  background: #217dbb;
+}
+.temp-wrap .add-wrap {
+  padding: 10px 0;
+}
+.temp-wrap .add-wrap .add-template {
+  padding: 5px 10px;
+  background: #3498db;
+  color: #f2f2f2;
+}
+.temp-wrap .add-wrap .add-template:hover {
+  background: #217dbb;
+}
+.blacklist .frame {
+  padding: 0;
+}
+.blacklist .table {
+  margin: auto;
+  max-width: 1060px;
+}
+.blacklist .table th,
+.blacklist .table td {
+  text-align: center;
+  vertical-align: middle !important;
+}
+.blacklist .btn-link span {
+  color: #3498db;
+}
+.blacklist .description,
+.blacklist .width-h3 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.blacklist .description {
+  margin-bottom: 0;
+}
+.blacklist .blacklist-name {
+  width: 100%;
+  margin-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#nav-pager {
+  padding: 0 200px;
+}
+/*添加优先级与添加黑名单的弹窗*/
+.temp .url-obj,
+.temp .vlan-obj {
+  margin: 7px;
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  background: #777777;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.temp .url-obj.active,
+.temp .vlan-obj.active {
+  background: #3498db;
+}
+.temp .list {
+  background: #eeeeee;
+  padding: 10px;
+}
+.temp #select-url .url-obj {
+  background: #3498db;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2016/3/9 9:24
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+ */
+.wxpay {
+  width: 1004px;
+  background: #fff;
+  margin: 40px auto 0;
+  padding: 20px;
+  border: 2px solid #cccccc;
+}
+.wxpay.mobile {
+  width: auto;
+  margin: 0;
+}
+.wxpay.mobile .order-header .order-list {
+  width: auto;
+}
+.wxpay.mobile .order-header .total-money {
+  width: 100%;
+  padding-left: 20px;
+}
+.wxpay.mobile .order-header .total-money .money {
+  font-size: 24px;
+  color: #c00;
+}
+.wxpay.mobile .weixin-container {
+  text-align: center;
+  padding-bottom: 0;
+}
+.wxpay.mobile .weixin-container .qrcode-container {
+  margin: auto;
+  width: auto;
+}
+.wxpay.mobile .weixin-container .qrcode-container .title {
+  display: none;
+}
+.wxpay.mobile .weixin-container .qrcode-container .tip {
+  margin: 5px 0 0 0;
+}
+.wxpay.mobile .weixin-container .qrcode-container .tip .tip-text {
+  width: 200px;
+}
+.wxpay.mobile .weixin-container .qrcode-container .qrcode {
+  width: 272px;
+}
+.wxpay.mobile .weixin-container .qrcode-container .qrcode .warning {
+  display: none;
+}
+.wxpay.mobile .weixin-container .iphone {
+  display: none;
+}
+.wxpay .order-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.wxpay .order-header .order-list {
+  width: 500px;
+  padding-left: 20px;
+  display: inline-block;
+  margin: 0;
+}
+.wxpay .order-header .order-list .order-item div {
+  display: inline-block;
+}
+.wxpay .order-header .order-list .order-item .order-name {
+  display: block;
+}
+.wxpay .order-header .total-money {
+  margin: 0;
+  width: 440px;
+  display: inline-block;
+  vertical-align: top;
+}
+.wxpay .order-header .total-money .money {
+  font-size: 24px;
+  color: #c00;
+}
+.wxpay .weixin-container {
+  padding: 20px 0;
+}
+.wxpay .weixin-container .qrcode-container {
+  text-align: center;
+  width: 550px;
+  height: 360px;
+  display: inline-block;
+}
+.wxpay .weixin-container .qrcode-container .title {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+.wxpay .weixin-container .qrcode-container .qrcode {
+  margin: auto;
+  width: 312px;
+  height: 272px;
+}
+.wxpay .weixin-container .qrcode-container .qrcode .qrcode-img {
+  width: 270px;
+  height: 270px;
+  float: left;
+}
+.wxpay .weixin-container .qrcode-container .qrcode .qrcode-img .img {
+  border: solid 1px #d9d9d9;
+  width: 270px;
+  height: 270px;
+}
+.wxpay .weixin-container .qrcode-container .qrcode .warning {
+  float: left;
+  width: 40px;
+  height: 270px;
+  background: url("/static/img/pay/native.png") 0 -369px;
+}
+.wxpay .weixin-container .qrcode-container .tip {
+  margin: 20px 0 0 0;
+  height: 40px;
+}
+.wxpay .weixin-container .qrcode-container .tip .icon {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  background: url("/static/img/pay/native.png") 0 -337px;
+}
+.wxpay .weixin-container .qrcode-container .tip .tip-text {
+  width: 112px;
+  display: inline-block;
+}
+.wxpay .weixin-container .qrcode-container .tip .tip-text > span {
+  display: inline-block;
+}
+.wxpay .weixin-container .iphone {
+  width: 400px;
+  height: 360px;
+  display: inline-block;
+  border-left: 1px solid #d9d9d9;
+}
+.wxpay .weixin-container .iphone .img {
+  width: 270px;
+  height: 337px;
+  margin: 0 0 0 45px;
+  background: url("/static/img/pay/native.png");
+}
+.wxpay .weixin-container .pay-success .fa {
+  font-size: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: -4px;
+}
+.wxpay .weixin-container .pay-success .fa-success {
+  color: #04af09;
+}
+.payment .type {
+  display: inline-block;
+  margin: 15px 15px 0 0;
+  padding: 0;
+  cursor: pointer;
+}
+.payment .type label {
+  border: 1px solid #eeeeee;
+  text-align: center;
+  width: 202px;
+  padding: 5px 10px;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+}
+.payment .type label:hover {
+  border: 1px solid #39baae;
+}
+.payment .type label img {
+  height: 40px;
+  float: left;
+}
+.payment .alipay {
+  background: url("/static/img/pay/alipay-pc.png") no-repeat;
+}
+.payment .wxpay {
+  background: url("/static/img/pay/wxpay.jpg") no-repeat;
+}
+/**
+ * Copyright (C) 2015 KiWiFi Networks Limited. All rights reserved
+ * Datetime: 2016/3/14 11:05
+ * Description:
+ * Author: 赖传峰
+ * Email: elegant.lai@kiwifi.cn
+ */
+.subscriber {
+  background: #fff;
+  height: 100%;
+}
+.subscriber .loading {
+  padding-top: 30px;
+}
+.subscriber .list .table {
+  width: 95%;
+  margin: auto;
+}
+.subscriber .list .table th {
+  text-align: center;
+}
+.subscriber .tab-content {
+  margin-top: -42px;
+  padding-top: 42px;
+  height: 100%;
+}
+.subscriber .tab-content .tab-pane {
+  height: 100%;
+}
+.subscriber .tab-content #gateway {
+  min-height: 155px;
+  height: 21%;
+}
+.subscriber .tab-content #vlan_row {
+  height: 27%;
+}
+.subscriber .order {
+  padding: 0 20px;
+}
+.subscriber .order .scrollbar {
+  right: 122px;
+}
+@media screen and (min-width: 1381px) and (max-width: 1480px) {
+  .subscriber .order .scrollbar {
+    right: 132px;
+  }
+}
+@media screen and (min-width: 1481px) and (max-width: 1580px) {
+  .subscriber .order .scrollbar {
+    right: 142px;
+  }
+}
+@media screen and (min-width: 1581px) and (max-width: 1680px) {
+  .subscriber .order .scrollbar {
+    right: 152px;
+  }
+}
+@media screen and (min-width: 1681px) and (max-width: 1780px) {
+  .subscriber .order .scrollbar {
+    right: 152px;
+  }
+}
+@media screen and (min-width: 1781px) and (max-width: 1881px) {
+  .subscriber .order .scrollbar {
+    right: 152px;
+  }
+}
+@media screen and (min-width: 1881px) {
+  .subscriber .order .scrollbar {
+    right: 152px;
+  }
+}
+.subscriber .subscription-name {
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html,
+body {
+  min-height: 200px;
+}
+#phpmessage {
+  margin: 0 auto 10px;
+  text-align: center;
+}
+.alert {
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer-inverse {
+  color: #333;
+}
+#icp {
+  text-decoration: none;
+  color: inherit;
+}
+.out-container {
+  height: 100%;
+  min-width: 700px;
+  /*与.navbar一致*/
+  /*固定菜单的对应内容框*/
+}
+.out-container .container-sidebar-fixed {
+  padding-left: 200px;
+}
+@media screen and (max-width: 900px) {
+  .out-container .container-sidebar-fixed {
+    -webkit-transition: padding-left 0.5s ease-in-out;
+    -moz-transition: padding-left 0.5s ease-in-out;
+    -o-transition: padding-left 0.5s ease-in-out;
+    transition: padding-left 0.5s ease-in-out;
+    padding-left: 0;
+  }
+}
+.content {
+  padding-top: 30px;
+}
+.content.above-page-header {
+  padding-top: 0;
+}
+/*注册框*/
+#modal_signup .modal-dialog .form-horizontal {
+  margin: auto;
+  width: 500px;
+  padding: 0 15px;
+}
+#modal_signup .modal-dialog .form-horizontal .form-control,
+#modal_signup .modal-dialog .form-horizontal .btn-width {
+  width: 500px;
+}
+/*网关list*/
+.router-list .panel {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+}
+.router-list .panel .panel-body {
+  padding: 2px;
+}
+.router-list .panel .panel-footer {
+  height: 60px;
+}
+.router-list .panel .panel-footer .edit-router {
+  margin-top: -32px;
+  cursor: pointer;
+}
+.router-list .panel .panel-footer .panel-title {
+  line-height: 33px;
+}
+.router-list .panel .panel-footer .panel-title a {
+  font-size: 24px;
+}
+.router-list .panel .panel-footer .panel-title input {
+  width: 140px;
+}
+/*弹窗显示的图表信息*/
+#modal_chart .fa {
+  margin-right: 10px;
+}
+#modal_chart .modal-dialog {
+  width: 1050px;
+}
+#modal_chart .modal-dialog #chart {
+  width: 1000px;
+  height: 400px;
+}
+/*带宽限制*/
+.bandwidth-wrap.signal div:first-child {
+  width: 120px;
+}
+.bandwidth-wrap.signal div.pull-right {
+  width: 350px;
+}
+.bandwidth-wrap.signal .bandwidth {
+  margin-left: 0;
+}
+.bandwidth-wrap div:first-child {
+  width: 217px;
+  display: inline-block;
+}
+.bandwidth-wrap div.pull-right {
+  width: 253px;
+  margin-right: 15px;
+  margin-top: 22px;
+}
+.bandwidth-wrap .bandwidth {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 42px;
+  padding: 7px;
+  color: #555;
+  font-size: 14px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, -o-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border: 1px solid #dce4ec;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+.bandwidth-wrap .bandwidth:focus {
+  border-color: #2c3e50;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+}
+.bandwidth-wrap .bandwidth-description {
+  width: 160px;
+  display: inline-block;
+}
+.bandwidth-wrap #slider,
+.bandwidth-wrap .slider {
+  margin-top: -6px;
+}
+.bandwidth-wrap .ui-widget-header {
+  background: #39baae;
+}
+/* 端口选择 */
+.choose-port {
+  padding: 0;
+}
+.choose-port input[type="radio"],
+.choose-port input[type="checkbox"] {
+  display: none;
+}
+.choose-port span {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.normal {
+  position: relative;
+  margin: 0 20px 20px;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #eee;
+  *zoom: 1;
+  display: inline-block;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.normal h3 {
+  line-height: 130px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.normal p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.normal:first-child {
+  margin-left: 0;
+}
+.normal:last-child {
+  margin-right: 0;
+}
+.normal:hover h3 {
+  line-height: 50px;
+}
+.normal:hover p {
+  color: #bbb;
+}
+.normal.active {
+  transition: all 0.3s ease 0s;
+  line-height: 50px;
+  background-color: #39baae;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.normal.active:after {
+  content: " ";
+  margin-left: -90px;
+  border: 1px solid rgba(200, 200, 200, 0.8);
+  background: rgba(254, 254, 254, 0.6);
+  position: absolute;
+  left: 50%;
+  top: -15px;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.normal.active.normal:hover {
+  line-height: 50px;
+}
+.normal.active h3 {
+  line-height: 50px;
+}
+.normal.active p {
+  color: #eee;
+}
+/*验证账户*/
+.valid-account .form-inline {
+  width: 500px;
+}
+.valid-account .form-inline .form-control {
+  width: 340px;
+}
+.valid-account .form-inline .valid-code-wrap {
+  width: 340px;
+  display: inline-block;
+}
+.valid-account .form-inline .btn {
+  width: 150px;
+}
+#modal_captcha .modal-dialog .form-inline {
+  width: 100%;
+}
+#modal_captcha .modal-dialog .form-inline .img-wrap {
+  padding: 1px;
+}
+#modal_captcha .modal-dialog .form-inline .img-wrap #img_captcha {
+  padding: 0;
+  cursor: pointer;
+}
+#modal_captcha .modal-dialog .form-inline .input-captcha {
+  width: 205px;
+}
+#modal_captcha .modal-dialog .form-inline .input-captcha #input_captcha {
+  width: 100%;
+}
+#modal_captcha .modal-dialog .form-inline .btn {
+  width: 125px;
+}
+/*订单信息*/
+.account-table {
+  font-size: 16px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+}
+.account-table .table tr:first-child td:first-child {
+  border-top: none;
+}
+.account-table .btn {
+  font-size: 20px;
+}
+.account-table .bold {
+  font-weight: bold;
+}
+.account-table .lg-size {
+  font-size: 30px;
+}
+.account-table .md-size {
+  font-size: 24px;
+}
+.account-table .money {
+  font-size: 30px;
+  font-weight: bold;
+}
+/*用户列表-staff*/
+.staff-wrap .frame {
+  padding: 0;
+}
+.staff-wrap .list {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.staff-wrap .operation-wrap {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+.staff-wrap .vlan-obj {
+  width: 50px;
+  height: 50px;
+}
+.staff-wrap th {
+  text-align: center;
+}
+.staff-wrap td {
+  line-height: 42px !important;
+  padding: 5px !important;
+  transition: all 0.15s;
+}
+.staff-wrap .row {
+  width: 100%;
+}
+.staff-wrap .btn-vlan {
+  height: 45px;
+  min-width: 100px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: #eeeeee;
+  color: #fff;
+  margin: 10px 0 0 10px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.staff-wrap .btn-vlan.selected {
+  padding-right: 30px;
+  margin: 10px 0 0 0;
+}
+.staff-wrap .btn-vlan.selected .vlan-close {
+  display: inline-block;
+  width: 20px;
+  font-size: 20px;
+  line-height: 16px;
+  height: 20px;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+  background: #c00;
+  color: #f2f2f2;
+  position: absolute;
+  right: 5px;
+  cursor: default;
+}
+.staff-wrap .btn-vlan:hover {
+  color: #e2e2e2;
+}
+.staff-wrap .btn-vlan span {
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+.staff-wrap .vlan-select {
+  width: 825px;
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+@media screen and (min-width: 1400px) and (max-width: 1599px) {
+  .staff-wrap .vlan-select {
+    width: 925px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .staff-wrap .vlan-select {
+    width: 1025px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .staff-wrap .vlan-select {
+    width: 725px;
+  }
+}
+.staff-wrap .close-vlan {
+  color: #c00;
+  cursor: pointer;
+  margin: 2px 0 -7px 0;
+  display: none;
+  text-decoration: none;
+}
+.staff-wrap .close-vlan:hover {
+  color: #c00;
+}
+.staff-wrap .policy-check {
+  height: 16px;
+  width: 16px;
+  margin: auto;
+  vertical-align: middle;
+}
+/*创建用户与编辑用户-staff，以及添加高级规则*/
+#mac_type .form-control {
+  padding-left: 2px;
+}
+#mac_type .form-control span {
+  font-size: 18px;
+}
+.staff label,
+.form-policy label {
+  font-size: 18px;
+}
+.staff .random,
+.form-policy .random {
+  padding-left: 30px;
+  padding-top: 3px;
+  border: none;
+  background-color: #fff;
+  text-align: left;
+}
+.staff .random .checkbox,
+.form-policy .random .checkbox {
+  margin-bottom: 3px;
+  font-size: 16px;
+}
+.staff .random .checkbox input[type="checkbox"],
+.form-policy .random .checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+.staff .bootstrap-switch,
+.form-policy .bootstrap-switch {
+  margin-left: 10px;
+  margin-top: -5px;
+  height: 30px;
+}
+.staff .select2-selection__choice,
+.form-policy .select2-selection__choice {
+  text-align: center;
+  width: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.staff .traffic-limit,
+.form-policy .traffic-limit {
+  width: 170px;
+  margin-bottom: 10px;
+}
+.staff .traffic-mode-wrap,
+.form-policy .traffic-mode-wrap {
+  margin-top: -2px;
+  margin-left: 10px;
+  display: inline-block;
+}
+.staff .traffic-mode-wrap .radio-block,
+.form-policy .traffic-mode-wrap .radio-block {
+  width: auto;
+}
+.staff #week_view,
+.form-policy #week_view,
+.staff #month_view,
+.form-policy #month_view {
+  width: 250px;
+  cursor: pointer;
+}
+.staff #week_view .ui-selectable-helper,
+.form-policy #week_view .ui-selectable-helper,
+.staff #month_view .ui-selectable-helper,
+.form-policy #month_view .ui-selectable-helper {
+  position: absolute;
+  z-index: 100;
+  border: 1px dotted black;
+}
+.staff #week_view .ui-selecting,
+.form-policy #week_view .ui-selecting,
+.staff #month_view .ui-selecting,
+.form-policy #month_view .ui-selecting {
+  background-color: #dce4ec;
+}
+.staff #week_view .ui-selected,
+.form-policy #week_view .ui-selected,
+.staff #month_view .ui-selected,
+.form-policy #month_view .ui-selected {
+  background-color: #39baae;
+  color: #fff;
+}
+.staff #start_time,
+.form-policy #start_time,
+.staff #end_time,
+.form-policy #end_time {
+  width: 215px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, -o-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border: 1px solid #dce4ec;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.staff #start_time:focus,
+.form-policy #start_time:focus,
+.staff #end_time:focus,
+.form-policy #end_time:focus {
+  border-color: #2c3e50;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80, 0.6);
+}
+/*时分选择器*/
+#ui-datepicker-div {
+  z-index: 200 !important;
+}
+#ui-datepicker-div .ui-timepicker-div .ui-widget-header {
+  margin-bottom: 8px;
+}
+#ui-datepicker-div .ui-timepicker-div dl {
+  text-align: left;
+}
+#ui-datepicker-div .ui-timepicker-div dl dt {
+  height: 25px;
+  margin-bottom: -25px;
+}
+#ui-datepicker-div .ui-timepicker-div dl dd {
+  margin: 0 10px 10px 65px;
+}
+#ui-datepicker-div .ui-timepicker-div td {
+  font-size: 90%;
+}
+#ui-datepicker-div .ui-timepicker-div .ui-tpicker-grid-label {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+#ui-datepicker-div .ui-timepicker-div .ui_tpicker_hour_label,
+#ui-datepicker-div .ui-timepicker-div .ui_tpicker_minute_label,
+#ui-datepicker-div .ui-timepicker-div .ui_tpicker_second_label,
+#ui-datepicker-div .ui-timepicker-div .ui_tpicker_millisec_label,
+#ui-datepicker-div .ui-timepicker-div .ui_tpicker_time_label {
+  padding-left: 20px;
+}
+/*地区选择*/
+.dashboard .region-label {
+  background: #f2f2f2;
+}
+.dashboard .region-display {
+  background: #f2f2f2;
+}
+.region-wrap {
+  background: #fff;
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 10px;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+}
+.region-wrap .region-label {
+  width: 100%;
+  height: 100%;
+}
+.region-wrap .region-display,
+.region-wrap .region-select {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 10px;
+  cursor: pointer;
+}
+.region-wrap .fa {
+  font-weight: bold;
+  font-size: 18px;
+}
+.region-wrap .region-display > span {
+  display: inline-block;
+}
+.region-wrap .region-display .region-current {
+  width: 70px;
+}
+.region-wrap .region-select {
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.modal-signup .tab-content {
+  padding: 20px 0 0 0;
+}
+.modal-signup .nav li a {
+  font-size: 18px;
+  padding: 0 15px 10px 15px;
+}
+.modal-signup .valid-code {
+  width: 340px !important;
+  display: inline-block;
+}
+.modal-signup .send-code {
+  width: 150px;
+}
+/*找回密码*/
+.captcha_wrap .form-control {
+  width: 260px;
+}
+.captcha_wrap .img_captcha {
+  width: 104px;
+  height: 42px;
+  padding: 1px;
+  cursor: pointer;
+}
+.user-outer #phpmessage {
+  margin-bottom: -30px;
+}
+/*登入页面菜单*/
+.navbar.outer .nav-menu {
+  margin-left: 320px;
+}
+.navbar.outer .navbar-nav {
+  margin-right: -15px;
+}
+.navbar.outer .signin {
+  display: inline-block;
+  border: 2px solid #777777;
+  border-radius: 30px;
+  margin: 8px 40px;
+  padding: 5px 40px;
+}
+.navbar.outer .global {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  background: url("/static/img/homepage/Globe-black.png") no-repeat;
+}
+.navbar.outer .navbar-right .dropdown-homepage {
+  left: auto;
+  right: -37px;
+  top: 51px;
+}
+.navbar.outer .nav > li.active > a {
+  color: #39baae;
+  border-bottom: 2px solid #39baae;
+  margin-bottom: -1px;
+}
+.navbar.outer .nav > li > a:hover,
+.navbar.outer .nav > li > a:focus,
+.navbar.outer .nav > li > a.active {
+  color: #39baae;
+  background-color: transparent;
+  border-color: #39baae;
+}
+/*# sourceMappingURL=site.css.map */

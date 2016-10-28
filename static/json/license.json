@@ -1,0 +1,70 @@
+﻿[
+  
+  {
+    "ID": "863ca197-77b0-479f-b910-8e925f992fc9",
+    "CreatedAt": "2016-09-27T16:16:10.269589+13:00",
+    "UpdatedAt": "2016-09-27T16:16:10.269589+13:00",
+    "DeletedAt": null,
+    "Name": "创业版",
+    "Price": 1,
+    "Description": "适合有基本IT网络知识的公司，自己管理自己的网络",
+    "BillingCycle": 1,
+    "RegionID": "76362879-7c81-497f-96c7-9e58184de599",
+    "Attribute": {
+      "MaxSubscriber": 10,
+      "Commission": 0,
+      "CustomizeDomain": false,
+      "CustomizeTheme": false
+    }
+  },
+  {
+    "ID": "39979494-c340-4d23-a804-9f9adc41582b",
+    "CreatedAt": "2016-09-27T16:16:10.269589+13:00",
+    "UpdatedAt": "2016-09-27T16:16:10.269589+13:00",
+    "DeletedAt": null,
+    "Name": "小型公司",
+    "Price": 2,
+    "Description": "适合小型网络服务公司",
+    "BillingCycle": 1,
+    "RegionID": "76362879-7c81-497f-96c7-9e58184de599",
+    "Attribute": {
+      "MaxSubscriber": 50,
+      "Commission": 0,
+      "CustomizeDomain": false,
+      "CustomizeTheme": true
+    }
+  },
+  {
+    "ID": "cc0e1809-8584-45e2-9e70-d83099344ff8",
+    "CreatedAt": "2016-09-27T16:16:10.269589+13:00",
+    "UpdatedAt": "2016-09-27T16:16:10.269589+13:00",
+    "DeletedAt": null,
+    "Name": "中型公司",
+    "Price": 19900,
+    "Description": "适合需要自己品牌形象的网络服公司",
+    "BillingCycle": 1,
+    "RegionID": "76362879-7c81-497f-96c7-9e58184de599",
+    "Attribute": {
+      "MaxSubscriber": 100,
+      "Commission": 5,
+      "CustomizeDomain": true,
+      "CustomizeTheme": true
+    }
+  },{
+    "ID": "9d94568c-e0e7-427d-86db-a5587d1add24",
+    "CreatedAt": "2016-09-27T16:16:10.316722+13:00",
+    "UpdatedAt": "2016-09-27T16:16:10.316722+13:00",
+    "DeletedAt": null,
+    "Name": "企业版",
+    "Price": 99900,
+    "Description": "适合大型网络服企业",
+    "BillingCycle": 1,
+    "RegionID": "76362879-7c81-497f-96c7-9e58184de599",
+    "Attribute": {
+      "MaxSubscriber": 1000,
+      "Commission": 2,
+      "CustomizeDomain": true,
+      "CustomizeTheme": true
+    }
+  }
+]
